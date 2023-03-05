@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(68, 174, 239);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.search {
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+thead {
+    background-color: rgb(128, 128, 128);
+}
