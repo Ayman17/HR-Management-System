@@ -1,58 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Update an existing employee data
-        </title>
-        <link rel="stylesheet" href="../CSS/style.css">
-    </head>
-    <style>
-        .center{
-            padding: 70px 0;
-            text-align: center;
-        }
-    </style>
-    <body>
-        <ul class="navigation">
-            <li><a href="Home.html" target="_blank">Home</a></li>
-            <li><a href="addNew.html" target="_blank">Add New Employee</a></li>
-            <li><a href="empInfo.html" target="_blank">Employee Information</a></li>
-            <li><a href="search_emp.html" target="_blank">Search for Employee</a></li>
-            <li><a href="approve&&reject.html" target="_blank">Approve and Reject</a></li>
+
+<head>
+    <title>
+        Update an existing employee data
+    </title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<style>
+    .center {
+        padding: 70px 0;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <ul class="navigation">
+        <li><a href="Home.html" target="_blank">Home</a></li>
+        <li><a href="addNew.html" target="_blank">Add New Employee</a></li>
+        <li><a href="empInfo.html" target="_blank">Employee Information</a></li>
+        <li><a href="search_emp.html" target="_blank">Search for Employee</a></li>
+        <li><a href="approve&&reject.html" target="_blank">Approve and Reject</a></li>
+    </ul>
+    <div class="center">
+        <ul style="list-style-type: none; align-items: center;">
+            <li>
+                <br>
+                <label>Name of employee</label>
+                <br>
+                <input type="search" required>
+            </li>
+            <li>
+                <br>
+                <button onclick="search()" value="Search">Search</button>
+            </li>
         </ul>
-        <div class="center">
-            <ul style="list-style-type: none; align-items: center;">
-                <li>
-                    <br>
-                    <label>Name of employee</label>
-                    <br>
-                    <input type="search" required>
-                </li>
-                <li>
-                    <br>
-                    <input type="submit" value="search">
-                </li>
-            </ul>
-        </div>
-        
-        <div class="center">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>phone</th>
-                        <th>id</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>bla</td>
-                        <td>01025546</td>
-                        <td>20211000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-    </body>
+    </div>
+
+    <script>
+        function search() {
+            window.location.href = "approve&&reject.html";
+        }
+    </script>
+</body>
+
 </html>
