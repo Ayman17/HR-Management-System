@@ -1,5 +1,6 @@
 body {
     background-color: rgb(68, 174, 239);
+    margin: 0;
 }
 
 ul {
@@ -43,4 +44,22 @@ thead {
 .navigation li:hover{
     background-color: black;
     color:blue
+}
+
+.navigation {
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+}
+
+.navigation a {
+    float: left;
+    padding: 20px 16px;
+    font-size: 20px;
+    text-decoration: none;
+    /* font-style:initial ; */
+    color: #ffffff;
+}
+
+.navigation a:hover {
+    background-color: green;
 }
