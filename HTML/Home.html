@@ -2,39 +2,26 @@
 <html>
 
 <head>
-    <title>
-        Human Resources Home Page
-    </title>
-    <link rel="stylesheet" href="../CSS/home.css">
+    <title>Project Home</title>
+    <link rel="stylesheet" href="/CSS/home.css">
 </head>
 
-<body class="home">
-    <h1 id="home_header">Website Home Page</h1>
-    <ul>
-        <!-- <li>
-             i think it is don't care
-                     i don't go to home if i in home !! -->
-            <!-- <a href="Home.html" target="_blank">
-                Home
-            </a>
-        </li>  -->
-        <li><a href="addNew.html" target="_blank">
-                Add New Employee
-            </a>
-        </li>
-        <li><a href="empInfo.html" target="_blank">
-                Employee Information
-            </a>
-        </li>
-        <li><a href="search_emp.html" target="_blank">
-                Search for Employee
-            </a>
-        </li>
-        <li><a href="approve&&reject.html" target="_blank">
-                Approve and Reject
-            </a>
-        </li>
-    </ul>
+<body>
+    <h1 id="Project_home">Web Technology Projects</h1>
+    <div class="center">
+        <button onclick="OurProject()">Human Resources</button>
+        <button>Students Affairs</button>
+        <button>Higher Studies</button>
+        <button>Laboratory Tracking</button>
+    </div>
+
+    <script>
+        function OurProject() {
+            window.open("HrHome.html");
+
+        }
+    </script>
+
 </body>
 
 </html>

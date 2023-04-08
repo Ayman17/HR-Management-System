@@ -23,3 +23,30 @@
     padding: 10px;
     margin: 20px;
 }
+
+#Project_home {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 100px;
+}
+
+button {
+    width: 25%; 
+    height: 80px; 
+    font-size: 30px; 
+    background-color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.center {
+    margin: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
