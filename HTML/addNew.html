@@ -13,7 +13,7 @@
 <body>
     <div class="navigation">
         <a href="HrHome.html" target="_blank">Home</a>
-        <a href="addNew.html">Add Employee</a>
+        <a href="addNew.html" class="active">Add Employee</a>
         <a href="empInfo.html">Employee Information</a>
         <a href="search_emp.html">Search for Employee</a>
         <a href="approve&&reject.html">Approve & Reject</a>
@@ -25,48 +25,51 @@
         <li><a href="search_emp.html" target="_blank">Search for Employee</a></li>
         <li><a href="approve&&reject.html" target="_blank">Approve & Reject</a></li>
     </ul> -->
+    <div class="form_div">
     <h1>Add new employee</h1>
     <!-- We can remove these lists and make it divs -->
     <form>
-        <div>
-            <ul style="list-style-type:none;width:600px;">
-                <li>
-                    <label for="employee_first_name" class="inputName">
-                        Employee Name:
-                    </label>
-                    <br>
-                    <input type="text" required name="employee_first_name" id="employee_first_name" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_last_name" class="inputName">Last Name:</label>
-                    <br>
-                    <input type="text" required name="employee_last_name" id="employee_last_name" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_id" class="inputName">ID:</label>
-                    <br>
-                    <input type="number" required name="employee_id" id="employee_id" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_email" class="inputName">Employee Email:</label>
-                    <br>
-                    <input type="email" required name="employee_email" id="employee_email" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
+        <!-- <div> -->
+            <!-- <ul style="list-style-type:none;width:600px;"> -->
+                <!-- <li> -->
+                    <div class= "form_element">
+                        <div>
+                            <label for="employee_first_name" class="inputName">
+                                Employee Name:
+                            </label>
+                            <br>
+                            <input type="text" required name="employee_first_name" id="employee_first_name" class="inputField">
+                        </div>
+                        <!-- </li> -->
+                        <!-- <li> -->
+                        <div>
+                            <label for="employee_last_name" class="inputName">Last Name:</label>
+                            <br>
+                            <input type="text" required name="employee_last_name" id="employee_last_name" class="inputField">
+                        </div>
+                    </div>
+                    <!-- <li> -->
+                    <div class="form_element" id= "email_input"> 
+                        <label for="employee_email" class="inputName">Employee Email:</label>
+                        <br>
+                        <input type="email" required name="employee_email" id="employee_email" class="inputField">
+                    </div>
+                    <!-- </li> -->
+                <!-- </li> -->	
+                <!-- <li> -->
+                    <!-- <div class= "form_element"> 
+                        <label for="employee_id" class="inputName">ID:</label>
+                        <br>
+                        <input type="number" required name="employee_id" id="employee_id" class="inputField">
+                    </div> -->
+                <!-- </li> -->
+                <!-- <li>
                     <label for="employee_address" class="inputName">Employee Address:</label>
                     <br>
                     <input type="text" name="employee_address" id="employee_address" class="inputField">
                     <br>
                     <br>
-                </li>
+                </li> -->
                 <li>
                     <label for="employee_phone" required class="inputName">Employee Phone Number:</label>
                     <br>
@@ -97,7 +100,7 @@
                 <li>
                     <label for="employee_vacation_available" class="inputName">Employee's Number Of Available Vaction
                         Days:</label>
-                    <br>
+                        <br>
                     <input type="number" name="employee_vacation" id="employee_vacation" class="inputField">
                     <br>
                     <br>
@@ -105,12 +108,12 @@
                 <li>
                     <label for="employee_vacation_actual" class="inputName">Employee's Number Of Actual Vaction
                         Days:</label>
-                    <br>
-                    <input type="number" name="employee_vacation_actual" id="employee_vacation_actual"
+                        <br>
+                        <input type="number" name="employee_vacation_actual" id="employee_vacation_actual"
                         class="inputField">
-                    <br>
-                    <br>
-                </li>
+                        <br>
+                        <br>
+                    </li>
                 <li>
                     <label for="employee_salary" class="inputName">Employee's Salary:</label>
                     <br>
@@ -128,10 +131,12 @@
                 <li>
                     <input type="submit" name="submit" id="submit">
                     <input type="reset" value="reset">
-                </li>
-            </ul>
-        </div>
+                </li> -->
+            <!-- </ul> -->
+        <!-- </div> -->
     </form>
+
+    </div>
 </body>
 
 </html>
