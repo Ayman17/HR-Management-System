@@ -106,6 +106,14 @@ form {
     float: left;
     display: flex;
     margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inline_form_element {
+    width: 50%;
+    padding-right: 20px;
+    overflow: hidden;
 }
 
 /* Input */
@@ -114,10 +122,11 @@ input {
     border: none;
     border-bottom: 1px solid #F96D00;
     background: none;
+    color: white;
 }
 
 input, label {
-    width: 300px;
+    width: 100%;
     margin: 20px;
 }
 
@@ -125,11 +134,12 @@ label {
     font-size: 20px;
 }
 
-#email_input {
-    display: block;
+#adress_input {
     width: 100%;
+    display: block;
+    overflow: hidden;
 }
 
-#email_input input {
-    width: 96%;
+#adress_input input{
+    width: 100%;
 }
