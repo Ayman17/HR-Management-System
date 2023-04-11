@@ -51,8 +51,6 @@ input[type=number] {
 }
 
 button {
-    /* width: 25%; 
-    height: 80px;  */
     padding: 20px;
     font-size: 20px;
     background-color: var(--back-color);
@@ -184,16 +182,17 @@ thead {
 h1 {
     font-size: 45px;
     text-align: left;
-    margin: 20px;
-    margin-bottom: 50px;
+    /* margin: 20px; */
+    margin-bottom: 30px;
 }
 
 
 /* form */
 .form_div {
     padding: 10px 40px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0px 10px 20px rgb(46, 46, 46);
     text-align: left;
     width: 60%;
@@ -210,15 +209,15 @@ form {
 .form_element {
     float: left;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
     overflow: hidden;
 }
 
 .inline_form_element {
     width: 50%;
-    padding-right: 20px;
     overflow: hidden;
+    margin-right: 10px;
 }
 
 /* Input */
@@ -230,10 +229,7 @@ input {
     color: var(--second-secondary-color);
     outline: none;
     font-size: 20px;
-}
-
-.empinfo label {
-    color: var(--second-secondary-color);
+    margin-top: 5px;
 }
 
 input,
@@ -241,18 +237,35 @@ label {
     width: 100%;
 }
 
+input[type="radio"] {
+    width: auto;
+    margin-top: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+    border: none;
+    background-color: var(--first-secondary-color);
+    border-radius: 20px;
+    font-size: 20px;
+    width: 20%;
+    height: 30px;
+    margin-right: 10px;
+}
+
 label {
     font-size: 20px;
-    margin-top: 50px;
     margin-bottom: 10px;
 }
 
+.empinfo label {
+    color: var(--second-secondary-color);
+}
+
 #adress_input {
-    width: 100%;
     display: block;
     overflow: hidden;
 }
 
 #adress_input input {
-    width: 100%;
+    width: 98%;
 }
