@@ -7,43 +7,35 @@
     </title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<style>
-    .center {
-        padding: 70px 0;
-        text-align: center;
-    }
-</style>
-
 <body>
-    <div class="navigation">
-        <a href="HrHome.html" target="_blank">Home</a>
-        <a href="addNew.html">Add Employee</a>
-        <a href="empInfo.html">Employee Information</a>
-        <a href="search_emp.html" class="active">Search for Employee</a>
-        <a href="approve&&reject.html">Approve & Reject</a>
+    <div class="container">
+        <div class="sidebar">
+            <header>
+                <h3 class="logo">HRSys</h3>
+                <nav class="navigation">
+                    <a href="HrHome.html">Home</a>
+                    <a href="addNew.html">Add Employee</a>
+                    <a href="empInfo.html" >Employee Information</a>
+                    <a href="search_emp.html" class="active">Search for Employee</a>
+                    <a href="approve&&reject.html">Approve & Reject</a>
+                </nav>
+            </header>
+        </div>
+        <div class="content">
+            <ul style="list-style-type: none; align-items: center;">
+                <li>
+                    <br>
+                    <label>Name of employee</label>
+                    <br>
+                    <input type="search" required>
+                </li>
+                <li>
+                    <br>
+                    <button onclick="search()" value="Search">Search</button>
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- <ul class="navigation">
-        <li><a href="Home.html" target="_blank">Home</a></li>
-        <li><a href="addNew.html" target="_blank">Add New Employee</a></li>
-        <li><a href="empInfo.html" target="_blank">Employee Information</a></li>
-        <li><a href="search_emp.html" target="_blank">Search for Employee</a></li>
-        <li><a href="approve&&reject.html" target="_blank">Approve and Reject</a></li>
-    </ul> -->
-    <div class="center">
-        <ul style="list-style-type: none; align-items: center;">
-            <li>
-                <br>
-                <label>Name of employee</label>
-                <br>
-                <input type="search" required>
-            </li>
-            <li>
-                <br>
-                <button onclick="search()" value="Search">Search</button>
-            </li>
-        </ul>
-    </div>
-
     <script>
         function search() {
             window.location.href = "approve&&reject.html";
