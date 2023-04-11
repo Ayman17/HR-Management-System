@@ -4,139 +4,139 @@
 
 <head>
     <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<header>
     <title>Human Resources Website</title>
-
-</header>
+</head>
 
 <body>
-    <div class="navigation">
-        <a href="HrHome.html" target="_blank">Home</a>
-        <a href="addNew.html" class="active">Add Employee</a>
-        <a href="empInfo.html">Employee Information</a>
-        <a href="search_emp.html">Search for Employee</a>
-        <a href="approve&&reject.html">Approve & Reject</a>
+    <div class="container">
+        <div class="sidebar">
+            <header>
+                <h3 class="logo">HRSys</h3>
+                <nav class="navigation">
+                    <a href="HrHome.html" target="_blank" >Home</a>
+                    <a href="addNew.html" class="active">Add Employee</a>
+                    <a href="empInfo.html">Employee Information</a>
+                    <a href="search_emp.html">Search for Employee</a>
+                    <a href="approve&&reject.html">Approve & Reject</a>
+                </nav>
+            </header>
+        </div>
+        <div class="content">
+            <div class="form_div">
+                <h1>Add new employee</h1>
+                <!-- We can remove these lists and make it divs -->
+                <form>
+                    <!-- <div> -->
+                        <!-- <ul style="list-style-type:none;width:600px;"> -->
+                            <!-- <li> -->
+                                <div class= "form_element">
+                                    <div class="inline_form_element">
+                                        <label for="employee_first_name" class="inputName">
+                                            Employee Name:
+                                        </label>
+                                        <br>
+                                        <input type="text" required name="employee_first_name" id="employee_first_name" class="inputField">
+                                    </div>
+            
+                                    <div class="inline_form_element">
+                                        <label for="employee_last_name" class="inputName">Last Name:</label>
+                                        <br>
+                                        <input type="text" required name="employee_last_name" id="employee_last_name" class="inputField">
+                                    </div>
+                                </div>
+            
+                                <div class= "form_element" id= "adress_input"> 
+                                    <label for="employee_email" class="inputName">Employee Email:</label>
+                                    <br>
+                                    <input type="email" required name="employee_email" id="employee_email" class="inputField">
+                                </div>
+                                
+                                <div class="form_element" id= "adress_input">
+                                    <label for="employee_address" class="inputName">Employee Address:</label>
+                                    <br>
+                                    <input type="text" name="employee_address" id="employee_address" class="inputField">
+                                    <br>
+                                    <br>
+                                </div>
+            
+                                <div class="form_element">
+                                    <div class="inline_form_element"> 
+                                        <label for="employee_id" class="inputName">ID:</label>
+                                        <br>
+                                        <input type="number" required name="employee_id" id="employee_id" class="inputField">
+                                    </div>
+                                    
+                                    <div class="inline_form_element">
+                                        <label for="employee_phone" required class="inputName">Employee Phone Number:</label>
+                                        <br>
+                                        <input type="number" name="employee_phone" id="employee_phone" class="inputField">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            <li>
+                                <label for="employee_gender" required class="inputName">Employee Gender:</label>
+                                <br>
+                                <select>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                <label for="employee_marital_status" class="inputName">Employee's Marital Status:</label>
+                                <br>
+                                <select>
+                                    <option value="married">Married</option>
+                                    <option value="unmarried">Unmarried</option>
+                                </select>
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                <label for="employee_vacation_available" class="inputName">Employee's Number Of Available Vaction
+                                    Days:</label>
+                                    <br>
+                                <input type="number" name="employee_vacation" id="employee_vacation" class="inputField">
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                <label for="employee_vacation_actual" class="inputName">Employee's Number Of Actual Vaction
+                                    Days:</label>
+                                    <br>
+                                    <input type="number" name="employee_vacation_actual" id="employee_vacation_actual"
+                                    class="inputField">
+                                    <br>
+                                    <br>
+                                </li>
+                            <li>
+                                <label for="employee_salary" class="inputName">Employee's Salary:</label>
+                                <br>
+                                <input type="number" required name="employee_salary" id="employee_salary" class="inputField">
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                <label for="employee_birth_date" class="inputName">Employee's Date Of Birth:</label>
+                                <br>
+                                <input type="date" name="employee_birth_date" id="employee_birth_date" class="inputField">
+                                <br>
+                                <br>
+                            </li>
+                            <li>
+                                <input type="submit" name="submit" id="submit">
+                                <input type="reset" value="reset"> -->
+                            <!-- </li>  -->
+                        <!-- </ul> -->
+                    <!-- </div> -->
+                </form>
+            
+                </div>
+        </div>
     </div>
-    <!-- <ul class="navigation">
-        <li><a href="Home.html" target="_blank">Home</a></li>
-        <li><a href="addNew.html" target="_blank">Add Employee</a></li>
-        <li><a href="empInfo.html" target="_blank">Employee Information</a></li>
-        <li><a href="search_emp.html" target="_blank">Search for Employee</a></li>
-        <li><a href="approve&&reject.html" target="_blank">Approve & Reject</a></li>
-    </ul> -->
-    <div class="form_div">
-    <h1>Add new employee</h1>
-    <!-- We can remove these lists and make it divs -->
-    <form>
-        <!-- <div> -->
-            <!-- <ul style="list-style-type:none;width:600px;"> -->
-                <!-- <li> -->
-                    <div class= "form_element">
-                        <div class="inline_form_element">
-                            <label for="employee_first_name" class="inputName">
-                                Employee Name:
-                            </label>
-                            <br>
-                            <input type="text" required name="employee_first_name" id="employee_first_name" class="inputField">
-                        </div>
-
-                        <div class="inline_form_element">
-                            <label for="employee_last_name" class="inputName">Last Name:</label>
-                            <br>
-                            <input type="text" required name="employee_last_name" id="employee_last_name" class="inputField">
-                        </div>
-                    </div>
-
-                    <div class= "form_element" id= "adress_input"> 
-                        <label for="employee_email" class="inputName">Employee Email:</label>
-                        <br>
-                        <input type="email" required name="employee_email" id="employee_email" class="inputField">
-                    </div>
-                    
-                    <div class="form_element" id= "adress_input">
-                        <label for="employee_address" class="inputName">Employee Address:</label>
-                        <br>
-                        <input type="text" name="employee_address" id="employee_address" class="inputField">
-                        <br>
-                        <br>
-                    </div>
-
-                    <div class="form_element">
-                        <div class="inline_form_element"> 
-                            <label for="employee_id" class="inputName">ID:</label>
-                            <br>
-                            <input type="number" required name="employee_id" id="employee_id" class="inputField">
-                        </div>
-                        
-                        <div class="inline_form_element">
-                            <label for="employee_phone" required class="inputName">Employee Phone Number:</label>
-                            <br>
-                            <input type="number" name="employee_phone" id="employee_phone" class="inputField">
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                <li>
-                    <label for="employee_gender" required class="inputName">Employee Gender:</label>
-                    <br>
-                    <select>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_marital_status" class="inputName">Employee's Marital Status:</label>
-                    <br>
-                    <select>
-                        <option value="married">Married</option>
-                        <option value="unmarried">Unmarried</option>
-                    </select>
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_vacation_available" class="inputName">Employee's Number Of Available Vaction
-                        Days:</label>
-                        <br>
-                    <input type="number" name="employee_vacation" id="employee_vacation" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_vacation_actual" class="inputName">Employee's Number Of Actual Vaction
-                        Days:</label>
-                        <br>
-                        <input type="number" name="employee_vacation_actual" id="employee_vacation_actual"
-                        class="inputField">
-                        <br>
-                        <br>
-                    </li>
-                <li>
-                    <label for="employee_salary" class="inputName">Employee's Salary:</label>
-                    <br>
-                    <input type="number" required name="employee_salary" id="employee_salary" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <label for="employee_birth_date" class="inputName">Employee's Date Of Birth:</label>
-                    <br>
-                    <input type="date" name="employee_birth_date" id="employee_birth_date" class="inputField">
-                    <br>
-                    <br>
-                </li>
-                <li>
-                    <input type="submit" name="submit" id="submit">
-                    <input type="reset" value="reset"> -->
-                <!-- </li>  -->
-            <!-- </ul> -->
-        <!-- </div> -->
-    </form>
-
-    </div>
+    
 </body>
 
 </html>

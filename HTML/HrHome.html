@@ -5,29 +5,27 @@
     <title>
         Human Resources Home 
     </title>
-    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body class="home">
-    <h1 id="home_header">Website Home Page</h1>
-    <ul>
-        <li><a href="addNew.html" target="_blank">
-                Add New Employee
-            </a>
-        </li>
-        <li><a href="empInfo.html" target="_blank">
-                Employee Information
-            </a>
-        </li>
-        <li><a href="search_emp.html" target="_blank">
-                Search for Employee
-            </a>
-        </li>
-        <li><a href="approve&&reject.html" target="_blank">
-                Approve and Reject
-            </a>
-        </li>
-    </ul>
+    <div class="container">
+        <header id="animate">
+            <h3 class="logo">HRSys</h3>
+            <nav class="navigation">
+                <a href="HrHome.html" target="_blank" class="active">Home</a>
+                <a href="addNew.html">Add Employee</a>
+                <a href="empInfo.html" >Employee Information</a>
+                <a href="search_emp.html">Search for Employee</a>
+                <a href="approve&&reject.html">Approve & Reject</a>
+            </nav>
+        </header>
+        <div>
+            <h1 id="home_header">Website Home Page</h1>
+        </div>
+    </div>
+
+    <script src="../JavaScript/Home.js"></script>
 </body>
 
 </html>
