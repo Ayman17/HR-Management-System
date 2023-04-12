@@ -269,3 +269,116 @@ label {
 #adress_input input {
     width: 98%;
 }
+
+
+/*Responsive and Hamburger nav*/
+@media only screen and (max-width: 800px){
+    header{
+        flex-direction: row;
+        justify-content:start;
+        width: 100%;
+        min-height: 0;
+        height: 10vh;
+        margin-left: 5vw;
+        margin: 0;
+        position: fixed;
+        background-color: var(--back-color);
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    #home_header{
+        position: absolute;
+        top: 20%;
+        font-size: clamp(1em, 1.5em, 3em);
+    }
+
+    #home_header.active{
+        top:50%;
+        
+    }
+
+    .navbar_toggle{
+        display: block;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .navbar_toggle span{
+        display: block;
+        height: 1vh;
+        width: 10vw;
+        margin: 1vh auto;
+        background-color: var(--second-secondary-color);
+    }
+    .navbar_toggle.active span:nth-child(1){
+        transform: rotate(90deg) translate(2vh, 1.5vh);
+    }
+    .navbar_toggle.active span:nth-child(2){
+        transform: rotate(90deg);
+    }
+    .navbar_toggle.active span:nth-child(3){
+        transform: rotate(90deg) translate(-2vh, -1.5vh);
+    }
+    
+    .toggle_container{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        gap: 20vw;
+    }
+
+    .navigation.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--back-color);
+    }
+
+    .container .content{
+        position: absolute;
+        top: 10%;
+        margin: 0;
+    }
+
+    h1{
+        font-size: clamp(0.5em, 1.5em, 3em);
+    }
+
+    form{
+        margin: 2vw;
+        width: 80%;
+        
+    }
+
+    form .form_element label{
+        font-size: clamp(0.5em, 1em, 2em);
+    }
+
+    form .form_element input{
+        font-size: clamp(0.5em, 1em, 2em);
+        width: fit-content;
+    }
+
+
+    
+    
+
+    .container .content.active{
+        top: 60%;
+    }
+
+    .table{
+        font-size: clamp(0.5em, 1em, 2em);
+    }
+    
+
+
+}
