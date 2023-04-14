@@ -1,10 +1,5 @@
-/*:root{
-    --back-color:#222831;
-    --primary-color: #454545;
-    --first-secondary-color: #FF6000;
-    --second-secondary-color: #FFA559;
-    --third-secondary-color: #FFE6C7;
-}*/
+/* Basic Syels*/
+
 :root {
     --back-color: #2C3333;
     --primary-color: #2E4F4F;
@@ -13,16 +8,22 @@
     --third-secondary-color: #bfbfbf;
 }
 
-
-* {
-    font-family: sans-serif;
-}
-
 body {
-
     background-color: var(--primary-color);
     margin: 0;
     color: var(--second-secondary-color);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: left;
+    /* margin: 20px; */
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -37,6 +38,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+/*------------------------------------------------*/
+
+/* Home Page */
+
 .home {
     font-size: 16px;
     color: var(--second-secondary-color);
@@ -50,34 +55,9 @@ input[type=number] {
     margin-bottom: 100px;
 }
 
-button {
-    padding: 20px;
-    font-size: 20px;
-    background-color: var(--back-color);
-    color: var(--second-secondary-color);
-    border: none;
-    transition: font-size 0.5s ease;
-    border-radius: 20px;
-    margin: 5px;
-}
+/*------------------------------------------------*/
 
-button:hover {
-    background-color: var(--second-secondary-color);
-    color: var(--back-color);
-}
-
-.center {
-    margin: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-
-ul {
-    list-style-type: none;
-}
+/* Navigation Bar */
 
 /* mansour and osama edits */
 header {
@@ -94,10 +74,6 @@ header .navigation {
     flex: 6;
 }
 
-/*
-header:hover{
-    width:40vw;
-}*/
 .logo {
     margin: 0 auto;
     margin-top: 20px;
@@ -136,9 +112,6 @@ header:hover{
     height: 100%;
 }
 
-/*end nav style*/
-
-/* main page */
 .container {
     display: flex;
     flex-direction: row;
@@ -149,43 +122,72 @@ header:hover{
 }
 
 
-.search {
-    font-size: 50px;
-    font-style: normal;
-    text-align: center;
-    width: 40%;
-    margin: auto;
-}
+/*------------------------------------------------*/
 
-thead {
-    background-color: var(--primary-color);
-}
+/* Inputs and Buttons */
 
-.table {
-    padding: 50px;
-    margin: 15px;
-    font-size: 30px;
+/* Buttons */
+button {
+    padding: 20px;
+    font-size: 20px;
     background-color: var(--back-color);
     color: var(--second-secondary-color);
+    border: none;
+    transition: font-size 0.5s ease;
+    border-radius: 20px;
+    margin: 5px;
 }
 
-.table td {
-    padding: 10px;
+button:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
 }
 
-.table button {
+/* Inputs */
+input {
+    border: none;
+    border-bottom: 1px solid var(--second-secondary-color);
+    background: none;
+    color: var(--second-secondary-color);
+    outline: none;
     font-size: 20px;
+    margin-top: 5px;
 }
 
-/* Headers */
-
-h1 {
-    font-size: 45px;
-    text-align: left;
-    /* margin: 20px; */
-    margin-bottom: 30px;
+input, label {
+    width: 100%;
 }
 
+input[type="radio"] {
+    width: auto;
+    margin-top: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+    border: none;
+    background-color: var(--first-secondary-color);
+    border-radius: 20px;
+    font-size: 20px;
+    width: 20%;
+    height: 30px;
+    margin-right: 10px;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------------*/
+
+/* Add Employee Page */
+.center {
+    margin: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
 
 /* form */
 .form_div {
@@ -220,43 +222,6 @@ form {
     margin-right: 10px;
 }
 
-/* Input */
-
-input {
-    border: none;
-    border-bottom: 1px solid var(--second-secondary-color);
-    background: none;
-    color: var(--second-secondary-color);
-    outline: none;
-    font-size: 20px;
-    margin-top: 5px;
-}
-
-input,
-label {
-    width: 100%;
-}
-
-input[type="radio"] {
-    width: auto;
-    margin-top: 20px;
-}
-
-input[type="submit"], input[type="reset"] {
-    border: none;
-    background-color: var(--first-secondary-color);
-    border-radius: 20px;
-    font-size: 20px;
-    width: 20%;
-    height: 30px;
-    margin-right: 10px;
-}
-
-label {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
 .empinfo label {
     color: var(--second-secondary-color);
 }
@@ -270,8 +235,47 @@ label {
     width: 98%;
 }
 
+/*------------------------------------------------*/
+
+/* Search for Employee Page */
+
+.search {
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+/*------------------------------------------------*/
+
+/* Regect and Accept Page */
+
+/* Table Syle */
+.table {
+    padding: 50px;
+    margin: 15px;
+    font-size: 30px;
+    background-color: var(--back-color);
+    color: var(--second-secondary-color);
+}
+thead {
+    background-color: var(--primary-color);
+}
+
+.table td {
+    padding: 10px;
+}
+
+.table button {
+    font-size: 20px;
+}
+
+
+/*------------------------------------------------*/
 
 /*Responsive and Hamburger nav*/
+
 @media only screen and (max-width: 800px){
     header{
         flex-direction: row;
@@ -366,10 +370,6 @@ label {
         font-size: clamp(0.5em, 1em, 2em);
         width: fit-content;
     }
-
-
-    
-    
 
     .container .content.active{
         top: 60%;

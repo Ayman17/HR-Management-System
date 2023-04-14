@@ -11,6 +11,8 @@ const smallScreen = window.matchMedia("(max-width: 800px)");
 const homeHeader = document.getElementById("home_header");
 
 
+
+
 //Functions
 function mouseOver(){
     el.style.width = "40vw";
@@ -41,14 +43,22 @@ function checkSmallScreen(){
 }
 
 
+
 //The Main function 
 
 function Main() {
+    /*
+    ELy 7t el line dh ... anta 5nzeer.
     window.open("HrHome.html");
+    */
 
     toggle.addEventListener('click', hamburgerClicked);
-    
-    addAnimate();
+
+    /*
+    Fakes el animation fe el home page.
+    addAnimate(); 
+    */
+
     checkSmallScreen();
 }
 

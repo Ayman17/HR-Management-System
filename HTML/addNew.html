@@ -31,101 +31,95 @@
         <div class="content">
             <div class="form_div">
                 <h1>Add new employee</h1>
-                <form>
+                <form id="form">
                     <div class="form_element">
                         <div class="inline_form_element">
-                            <label for="employee_first_name" class="inputName">
-                                Employee Name:
-                            </label>
+                            <label for="first_name" class="inputName">Name:</label>
                             <br>
-                            <input type="text" required name="employee_first_name" id="employee_first_name"
+                            <input type="text" required name="first_name" id="first_name"
                                 class="inputField">
                         </div>
 
                         <div class="inline_form_element">
-                            <label for="employee_last_name" class="inputName">Last Name:</label>
+                            <label for="last_name" class="inputName">Last Name:</label>
                             <br>
-                            <input type="text" required name="employee_last_name" id="employee_last_name"
+                            <input type="text" required name="last_name" id="last_name"
                                 class="inputField">
                         </div>
                     </div>
 
                     <div class="form_element" id="adress_input">
-                        <label for="employee_email" class="inputName">Employee Email:</label>
+                        <label for="email" class="inputName">Email:</label>
                         <br>
-                        <input type="email" required name="employee_email" id="employee_email" class="inputField">
+                        <input type="email" required name="email" id="email" class="inputField">
                     </div>
 
                     <div class="form_element" id="adress_input">
-                        <label for="employee_address" class="inputName">Employee Address:</label>
+                        <label for="address" class="inputName">Address:</label>
                         <br>
-                        <input type="text" name="employee_address" id="employee_address" class="inputField">
+                        <input type="text" name="address" id="address" class="inputField">
                     </div>
 
                     <div class="form_element">
                         <div class="inline_form_element">
-                            <label for="employee_id" class="inputName">ID:</label>
+                            <label for="id" class="inputName">ID:</label>
                             <br>
-                            <input type="number" required name="employee_id" id="employee_id" class="inputField">
+                            <input type="number" required name="id" id="id" class="inputField">
                         </div>
 
                         <div class="inline_form_element">
-                            <label for="employee_phone" required class="inputName">Employee Phone Number:</label>
+                            <label for="phone" required class="inputName">Phone Number:</label>
                             <br>
-                            <input type="number" name="employee_phone" id="employee_phone" class="inputField">
+                            <input type="number" name="phone" id="phone" class="inputField">
                         </div>
                     </div>
 
                     <div class="form_element">
                         <div class="inline_form_element">
-                            <label for="employee_gender" required class="inputName">Employee Gender:</label>
+                            <label for="gender" required class="inputName">Gender:</label>
                             <br>
-                            <input type="radio" value="Male" id="Gender1" name="Gender">
-                            <label for="Gender1">Male</label>
+                            <input type="radio" value="male" id="male" name="gender" checked>
+                            <label for="male">Male</label>
                             <br>
-                            <input type="radio" value="Female" id="Gender2" name="Gender">
-                            <label for="Gender2">Female</label>
+                            <input type="radio" value="female" id="female" name="gender">
+                            <label for="female">Female</label>
                         </div>
                         <div class="inline_form_element">
-                            <label for="employee_marital_status" class="inputName">Employee's Marital Status:</label>
+                            <label for="marital_status" class="inputName">Marital Status:</label>
                             <br>
-                            <input type="radio" id="status1" name="marital_status" value="Married">
+                            <input type="radio" id="status1" name="marital_status" value="married" checked>
                             <label for="status1"> Married</label>
                             <br>
-                            <input type="radio" id="status2" name="marital_status" value="Unmarried">
+                            <input type="radio" id="status2" name="marital_status" value="unmarried">
                             <label for="status2"> Unmarried</label>
                         </div>
                     </div>
 
                     <div class="form_element">
                         <div class="inline_form_element">
-                            <label for="employee_vacation_available" class="inputName">Employee's Number Of Available
-                                Vaction
-                                Days:</label>
+                            <label for="vacation_available" class="inputName">Number Of AvailableVactionDays:</label>
                             <br>
-                            <input type="number" name="employee_vacation" id="employee_vacation" class="inputField">
+                            <input type="number" name="vacation" id="vacation" class="inputField">
                         </div>
                         <div class="inline_form_element">
-                            <label for="employee_vacation_actual" class="inputName">Employee's Number Of Actual Vaction
-                                Days:</label>
+                            <label for="vacation_actual" class="inputName">Number Of Actual Vaction Days:</label>
                             <br>
-                            <input type="number" name="employee_vacation_actual" id="employee_vacation_actual"
-                                class="inputField">
+                            <input type="number" name="vacation_actual" id="vacation_actual"class="inputField">
                         </div>
                     </div>
 
                     <div class="form_element">
                         <div class="inline_form_element">
-                            <label for="employee_salary" class="inputName">Employee's Salary:</label>
+                            <label for="salary" class="inputName">Salary:</label>
                             <br>
-                            <input type="number" required name="employee_salary" id="employee_salary"
+                            <input type="number" required name="salary" id="salary"
                                 class="inputField">
                         </div>
 
                         <div class="inline_form_element">
-                            <label for="employee_birth_date" class="inputName">Employee's Date Of Birth:</label>
+                            <label for="birth_date" class="inputName">Date Of Birth:</label>
                             <br>
-                            <input type="date" name="employee_birth_date" id="employee_birth_date" class="inputField">
+                            <input type="date" name="birth_date" id="birth_date" class="inputField">
                         </div>
                     </div>
 
@@ -140,4 +134,5 @@
     </div>
 </body>
 <script src="../JavaScript/Home.js"></script>
+<script src="../JavaScript/addNewEmployee.js"></script>
 </html>
