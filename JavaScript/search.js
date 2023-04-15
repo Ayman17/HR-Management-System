@@ -42,8 +42,8 @@ function search()
                 <td>${e.id}</td>
                 <td>
                     <button>Approve</button>
-                    <button>Reject</button>
-                    <button>Edit</button>
+                    <button onclick="reject(${e.id}, this)" id"reject">Reject</button>
+                    <button onclick="edit()" id="edit">Edit</button>
                 </td>
             </tr>`;
         }
@@ -73,3 +73,21 @@ function research()
     document.getElementById("searchSection").style.display = 'flex';
 
 }
+
+function reject (id, button)
+{
+    deleteRow(button);
+    localStorage.removeItem(id);
+}
+
+function deleteRow(button) {
+    // Get the row that contains the clicked button
+    const row = button.parentNode.parentNode;
+
+    // Get the table that contains the row
+    const table = row.parentNode.parentNode;
+
+    // Delete the row from the table
+    table.deleteRow(row.rowIndex);
+}
+  
