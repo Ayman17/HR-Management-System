@@ -59,7 +59,6 @@ input[type=number] {
 
 /* Navigation Bar */
 
-/* mansour and osama edits */
 header {
     display: flex;
     flex-direction: column;
@@ -154,16 +153,19 @@ input {
     margin-top: 5px;
 }
 
-input, label {
+input,
+label {
     width: 100%;
 }
 
 input[type="radio"] {
     width: auto;
     margin-top: 20px;
+    accent-color: var(--first-secondary-color);
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"],
+input[type="reset"] {
     border: none;
     background-color: var(--first-secondary-color);
     border-radius: 20px;
@@ -176,6 +178,11 @@ input[type="submit"], input[type="reset"] {
 label {
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+/* for calender icon to be white  */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 /*------------------------------------------------*/
@@ -207,6 +214,7 @@ label {
 form {
     display: block;
 }
+
 
 .form_element {
     float: left;
@@ -259,6 +267,7 @@ form {
     background-color: var(--back-color);
     color: var(--second-secondary-color);
 }
+
 thead {
     background-color: var(--primary-color);
 }
@@ -276,10 +285,10 @@ thead {
 
 /*Responsive and Hamburger nav*/
 
-@media only screen and (max-width: 800px){
-    header{
+@media only screen and (max-width: 800px) {
+    header {
         flex-direction: row;
-        justify-content:start;
+        justify-content: start;
         width: 100%;
         min-height: 0;
         height: 10vh;
@@ -289,53 +298,56 @@ thead {
         background-color: var(--back-color);
     }
 
-    .navigation{
+    .navigation {
         display: none;
     }
 
-    #home_header{
+    #home_header {
         position: absolute;
         top: 20%;
         font-size: clamp(1em, 1.5em, 3em);
     }
 
-    #home_header.active{
-        top:50%;
-        
+    #home_header.active {
+        top: 50%;
+
     }
 
-    .navbar_toggle{
+    .navbar_toggle {
         display: block;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
         align-items: center;
     }
 
-    .navbar_toggle span{
+    .navbar_toggle span {
         display: block;
         height: 1vh;
         width: 10vw;
         margin: 1vh auto;
         background-color: var(--second-secondary-color);
     }
-    .navbar_toggle.active span:nth-child(1){
+
+    .navbar_toggle.active span:nth-child(1) {
         transform: rotate(90deg) translate(2vh, 1.5vh);
     }
-    .navbar_toggle.active span:nth-child(2){
+
+    .navbar_toggle.active span:nth-child(2) {
         transform: rotate(90deg);
     }
-    .navbar_toggle.active span:nth-child(3){
+
+    .navbar_toggle.active span:nth-child(3) {
         transform: rotate(90deg) translate(-2vh, -1.5vh);
     }
-    
-    .toggle_container{
+
+    .toggle_container {
         display: flex;
         flex-direction: row;
         position: absolute;
         gap: 20vw;
     }
 
-    .navigation.active{
+    .navigation.active {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -346,39 +358,39 @@ thead {
         background-color: var(--back-color);
     }
 
-    .container .content{
+    .container .content {
         position: absolute;
         top: 10%;
         margin: 0;
     }
 
-    h1{
+    h1 {
         font-size: clamp(0.5em, 1.5em, 3em);
     }
 
-    form{
+    form {
         margin: 2vw;
         width: 80%;
-        
+
     }
 
-    form .form_element label{
+    form .form_element label {
         font-size: clamp(0.5em, 1em, 2em);
     }
 
-    form .form_element input{
+    form .form_element input {
         font-size: clamp(0.5em, 1em, 2em);
         width: fit-content;
     }
 
-    .container .content.active{
+    .container .content.active {
         top: 60%;
     }
 
-    .table{
+    .table {
         font-size: clamp(0.5em, 1em, 2em);
     }
-    
+
 
 
 }
