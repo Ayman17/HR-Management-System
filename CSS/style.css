@@ -55,6 +55,20 @@ input[type=number] {
     margin-bottom: 100px;
 }
 
+.Hcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    min-height: 100vh;
+    margin: 20px;
+
+}
+
+.homeImage{
+    width: 40vw;
+}
+
 /*------------------------------------------------*/
 
 /* Navigation Bar */
