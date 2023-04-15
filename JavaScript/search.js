@@ -11,16 +11,7 @@ function search()
             </tr>
         </thead>
         <tbody id="Tbody">
-            <tr>
-                <td>Ahmed</td>
-                <td>01050505050</td>
-                <td>20</td>
-                <td>
-                    <button>Approve</button>
-                    <button>Reject</button>
-                    <button>Edit</button>
-                </td>
-            </tr>`;
+            `;
 
     // hide the search text bar to avoid multiple searches
     document.getElementById("searchSection").style.display = 'none';
