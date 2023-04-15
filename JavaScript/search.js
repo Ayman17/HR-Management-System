@@ -77,6 +77,7 @@ function search()
 
 function research()
 {
+    document.getElementById("searchName").value = '';
     document.getElementById("tableDiv").style.display = 'none';
     document.getElementById("searchSection").style.display = 'flex';
 
