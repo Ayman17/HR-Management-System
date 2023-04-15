@@ -29,25 +29,46 @@
             </header>
         </div>
         <div class="content">
-            <ul style="list-style-type: none; align-items: center;">
-                <li>
-                    <br>
-                    <label>Name of employee</label>
-                    <br>
-                    <input type="search" required>
-                </li>
-                <li>
-                    <br>
-                    <button onclick="search()" value="Search">Search</button>
-                </li>
-            </ul>
+            <div class="searchSection" id="searchSection">
+                <label>Name of employee</label>
+                <br>
+                <input type="search" required id="searchName">
+                <br>
+                <button onclick="search()" value="Search" name="search">Search</button>
+            </div>
+            <div id="tableDiv">
+                <table class="searchTable" id="searchTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>phone</th>
+                            <th>id</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Tbody">
+                        <tr>
+                            <td>Ahmed</td>
+                            <td>01050505050</td>
+                            <td>20</td>
+                            <td>
+                                <button>Approve</button>
+                                <button>Reject</button>
+                                <button>Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script>
+    <script src="../JavaScript/search.js"></script>
+    <!--<script>
         function search() {
             window.location.href = "approve&&reject.html";
         }
-    </script>
+    </script>-->
+    
 </body>
-<script src="../JavaScript/Home.js"></script>
+
 </html>
