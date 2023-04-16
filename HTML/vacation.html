@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Human Resources Website</title>
+    <link rel="stylesheet" href="/CSS/Root_Style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <header>
+                <div class="toggle_container">
+                    <div class="navbar_toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+                <h3 class="logo">HR_System</h3>
+            </div>
+                <nav class="navigation">
+                    <a href="HrHome.html">Home</a>
+                    <a href="addNew.html" class="active">Add Employee</a>
+                    <a href="empInfo.html">Employee Information</a>
+                    <a href="search_emp.html">Search for Employee</a>
+                    <a href="submittedVacations.html">Vacations List</a>
+                    <a href="vacation.html">Submit Vacation</a>
+                </nav>
+            </header>
+        </div>
+        <div class="content">
+            <div class="form_div">
+                <h1>Vacation Request</h1>
+                <form id="form">
+                    <div class="form_element idVacation">
+                            <label for="id" class="inputName">ID:</label>
+                            <input type="number" required name="id" id="id" class="inputField">
+                    </div>
+                    <div class="form_element">
+                        <div class="inline_form_element">
+                            <label for="birth_date" class="inputName">From:</label>
+                            <br>
+                            <input type="date" name="from_date" id="from_date" class="inputField">
+                        </div>
+
+                        <div class="inline_form_element">
+                            <label for="birth_date" class="inputName">To:</label>
+                            <br>
+                            <input type="date" name="to_date" id="to_date" class="inputField">
+                        </div>
+                    </div>
+
+                    <div class="form_element idVacation">
+                        <label for="birth_date" class="inputName">Reason:</label>
+                        <br>
+                        <textarea name="reason" id="reason" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <div class="form_element">
+                        <input type="submit" name="submit" id="submit">
+                        <input type="reset" value="Reset">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../JavaScript/Home.js"></script>
+</html>

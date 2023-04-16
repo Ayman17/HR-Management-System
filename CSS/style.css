@@ -358,6 +358,38 @@ thead {
 
 /*------------------------------------------------*/
 
+/*submit vacation*/
+
+.idVacation{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#reason{
+    border: none;
+    border-bottom: 1px solid var(--second-secondary-color);
+    background: none;
+    color: var(--second-secondary-color);
+    outline: none;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+/*------------------------------------------------*/
+
+/* vacation list */
+
+#vacationTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*------------------------------------------------*/
+
 /*Responsive and Hamburger nav*/
 
 @media only screen and (max-width: 800px) {

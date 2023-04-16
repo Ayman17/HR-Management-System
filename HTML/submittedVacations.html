@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 
 <head>
     <title>
-        Update an existing employee data
+        Accept and Reject Vacations
     </title>
     <link rel="stylesheet" href="/CSS/Root_Style.css">
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
@@ -24,21 +25,18 @@
                     <a href="HrHome.html">Home</a>
                     <a href="addNew.html">Add Employee</a>
                     <a href="empInfo.html" >Employee Information</a>
-                    <a href="search_emp.html" class="active">Search for Employee</a>
-                    <a href="submittedVacations.html">Vacations List</a>
+                    <a href="search_emp.html" >Search for Employee</a>
+                    <a href="submittedVacations.html" class="active">Vacations List</a>
                     <a href="vacation.html">Submit Vacation</a>
                 </nav>
             </header>
         </div>
         <div class="content">
-            <div class="searchSection" id="searchSection">
-                <label>Name of employee</label>
-                <br>
-                <input type="search" required id="searchName">
-                <br>
-                <button onclick="search()" value="Search" name="search">Search</button>
-            </div>
-            <div id="tableDiv">
+            
+            <div id="vacationTable">
+                <h1>
+                    Summitted Vacations
+                </h1>
                 <table class="searchTable" id="searchTable">
                     <thead>
                         <tr>
@@ -56,7 +54,6 @@
                             <td>
                                 <button>Approve</button>
                                 <button>Reject</button>
-                                <button>Edit</button>
                             </td>
                         </tr>
                     </tbody>
@@ -64,13 +61,6 @@
             </div>
         </div>
     </div>
-    <script src="../JavaScript/search.js"></script>
-    <!--<script>
-        function search() {
-            window.location.href = "submittedVacations.html";
-        }
-    </script>-->
-    
 </body>
-
+<script src="../JavaScript/Home.js"></script>
 </html>
