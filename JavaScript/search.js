@@ -41,8 +41,8 @@ function search()
                 <td>${e.phone}</td>
                 <td>${e.id}</td>
                 <td>
-                    <button>Approve</button>
-                    <button onclick="reject(${e.id}, this)" id"reject">Reject</button>
+                    <!-- <button>Approve</button>
+                    <button onclick="reject(${e.id}, this)" id"reject">Reject</button> -->
                     <button onclick="edit(${e.id})" id="edit">Edit</button>
                 </td>
             </tr>`;
