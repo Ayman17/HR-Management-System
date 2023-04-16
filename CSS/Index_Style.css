@@ -1,0 +1,28 @@
+/* Home Page */
+
+.home {
+    font-size: 16px;
+    color: var(--second-secondary-color);
+    background-color: var(--primary-color);
+}
+
+#Project_home {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 100px;
+}
+
+.Hcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    min-height: 100vh;
+    margin: 20px;
+
+}
+
+.homeImage{
+    width: 40vw;
+}

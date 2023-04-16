@@ -1,0 +1,108 @@
+/* Basic Syels*/
+
+:root {
+    --back-color: #2C3333;
+    --primary-color: #2E4F4F;
+    --first-secondary-color: #0E8388;
+    --second-secondary-color: #CBE4DE;
+    --third-secondary-color: #bfbfbf;
+}
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    color: var(--second-secondary-color);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: left;
+    /* margin: 20px; */
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*------------------------------------------------*/
+
+/* Navigation Bar */
+
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    background-color: var(--back-color);
+    width: 20vw;
+    transition: all 0.9s ease-in-out;
+}
+
+header .navigation {
+    flex: 6;
+}
+
+.logo {
+    margin: 0 auto;
+    margin: 100px;
+    margin-top: 20px;
+    flex: 1;
+    color: var(--second-secondary-color);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navigation a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--second-secondary-color);
+}
+
+.navigation a:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
+}
+
+.navigation a.active,
+.navigation a.active:hover {
+    background-color: var(--primary-color);
+    color: var(--second-secondary-color);
+}
+
+.sidebar {
+    display: block;
+    top: 0;
+    position: fixed;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    margin-left: 20vw;
+    width: 78vw;
+}
+
+
