@@ -1,3 +1,29 @@
+// change the values of edit page to the required one to edit
+let eID = localStorage.getItem('editID');
+document.getElementById("id").value = eID;
+document.getElementById("first_name").value = JSON.parse(localStorage.getItem(eID)).firstName;
+document.getElementById("last_name").value = JSON.parse(localStorage.getItem(eID)).secondName;
+document.getElementById("email").value = JSON.parse(localStorage.getItem(eID)).email;
+document.getElementById("address").value = JSON.parse(localStorage.getItem(eID)).address;
+document.getElementById("phone").value = JSON.parse(localStorage.getItem(eID)).phone;
+
+if (JSON.parse(localStorage.getItem(eID)).gender === 'male')
+    document.querySelector("#male").checked = true;
+else
+    document.querySelector("#female").checked = true;
+
+if (JSON.parse(localStorage.getItem(eID)).maritalStatus === 'married')
+    document.querySelector("#married").checked = true;
+else
+    document.querySelector("#unmarried").checked = true;
+
+document.getElementById("vacation_actual").value = JSON.parse(localStorage.getItem(eID)).actualVacation;
+document.getElementById("vacation").value = JSON.parse(localStorage.getItem(eID)).availableVacation;
+document.getElementById("salary").value = JSON.parse(localStorage.getItem(eID)).salary;
+document.getElementById("birth_date").value = JSON.parse(localStorage.getItem(eID)).birthDate;
+
+
+// edit validation
 const submitButton = document.getElementById('submit');
 const formElement = document.getElementById('form');
 
@@ -38,7 +64,23 @@ function addNewEmployee() {
     };
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
+
+        // happy scenario
         localStorage.setItem(employee.id, JSON.stringify(employee));
+        const contentDiv = document.getElementById("content_div");
+
+        const myH3 = document.createElement('h3');
+        myH3.textContent = 'Employee info updated successfully :)';
+        contentDiv.append(myH3);
+        contentDiv.append(document.createElement('br'));
+
+        const myButton = document.createElement('button');
+        myButton.textContent = 'Edit another employee';
+        myButton.setAttribute("onclick", "research()");
+        contentDiv.append(myButton);
+
+        contentDiv.classList.add('centered_data')
+        document.getElementById("edit_div").style.display = 'none';
     }else {
         alert(errorMessages[infoValidation]);
     }
@@ -78,3 +120,8 @@ function main() {
 }
 
 main();
+
+function research()
+{
+    window.location.href = 'search_emp.html';
+}

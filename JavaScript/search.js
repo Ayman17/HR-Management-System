@@ -43,7 +43,7 @@ function search()
                 <td>
                     <button>Approve</button>
                     <button onclick="reject(${e.id}, this)" id"reject">Reject</button>
-                    <button onclick="edit()" id="edit">Edit</button>
+                    <button onclick="edit(${e.id})" id="edit">Edit</button>
                 </td>
             </tr>`;
         }
@@ -90,4 +90,10 @@ function deleteRow(button) {
     // Delete the row from the table
     table.deleteRow(row.rowIndex);
 }
-  
+
+function edit (id)
+{
+    // use the localStorage to store the sent id in order to easy access the required employee for edit
+    localStorage.setItem('editID', id);
+    window.location.href = "empInfo.html";
+}

@@ -69,6 +69,14 @@ input[type=number] {
     width: 40vw;
 }
 
+.centered_data{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /*------------------------------------------------*/
 
 /* Navigation Bar */
@@ -185,9 +193,14 @@ input[type="reset"] {
     background-color: var(--first-secondary-color);
     border-radius: 20px;
     font-size: 20px;
-    width: 20%;
     height: 30px;
     margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
 }
 
 label {
