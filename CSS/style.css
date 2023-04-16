@@ -1,6 +1,6 @@
 /* Basic Syels*/
 
-/* :root {
+:root {
     --back-color: #2C3333;
     --primary-color: #2E4F4F;
     --first-secondary-color: #0E8388;
@@ -24,36 +24,36 @@ h1 {
 ul {
     list-style-type: none;
 }
-*/
+
 
 /* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-} */
+}
 
 /* Firefox */
-/* input[type=number] {
+input[type=number] {
     -moz-appearance: textfield;
-} */
+}
 
 /*------------------------------------------------*/
 
 /* Home Page */
 
-/* .home {
+.home {
     font-size: 16px;
     color: var(--second-secondary-color);
     background-color: var(--primary-color);
-} */
+}
 
-/* #Project_home {
+#Project_home {
     font-size: 60px;
     text-align: center;
     margin-top: 210px;
     margin-bottom: 100px;
-} */
+}
 
 .Hcontent{
     display: flex;
