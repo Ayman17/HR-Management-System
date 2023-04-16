@@ -392,7 +392,7 @@ thead {
 
 /*Responsive and Hamburger nav*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 769px) {
     header {
         flex-direction: row;
         justify-content: start;
@@ -401,7 +401,7 @@ thead {
         height: 10vh;
         margin-left: 5vw;
         margin: 0;
-        position: fixed;
+        position: absolute;
         background-color: var(--back-color);
     }
 
@@ -409,15 +409,9 @@ thead {
         display: none;
     }
 
-    #home_header {
-        position: absolute;
-        top: 20%;
-        font-size: clamp(1em, 1.5em, 3em);
-    }
-
-    #home_header.active {
-        top: 50%;
-
+    .sidebar {
+        display: flex;
+        width: 100%;
     }
 
     .navbar_toggle {
@@ -465,39 +459,71 @@ thead {
         background-color: var(--back-color);
     }
 
-    .container .content {
-        position: absolute;
-        top: 10%;
-        margin: 0;
-    }
 
     h1 {
         font-size: clamp(0.5em, 1.5em, 3em);
     }
 
-    form {
-        margin: 2vw;
-        width: 80%;
-
+    #form .form_element label {
+        font-size: clamp(0.7em, 1em, 1.5em);
     }
 
-    form .form_element label {
-        font-size: clamp(0.5em, 1em, 2em);
-    }
-
-    form .form_element input {
-        font-size: clamp(0.5em, 1em, 2em);
+    #form .form_element input {
+        font-size: clamp(0.7em, 1em, 1.5em);
         width: fit-content;
     }
 
-    .container .content.active {
-        top: 60%;
-    }
-
     .table {
-        font-size: clamp(0.5em, 1em, 2em);
+        padding: 1vh;
+        margin: 1vh;
+        font-size: unset;
     }
 
+    .table *{
+        font-size: clamp(1.5vw, 3vw, 3vw);
+        
+        
+    }
+
+    .table td {
+        padding: 1vw;
+        margin: 0;
+    }
+
+    .table button {
+        font-size: clamp(1.5vw, 2vw, 3vw);
+    }
+
+    .content {
+        margin: 1vw;
+        margin-top: 10vh;
+        
+    }
+
+    .container {
+        justify-content: left;
+        min-height: 100vh;
+        overflow: hidden;
+        
+    }
+
+}
+
+
+
+
+@media only screen and ((min-width: 480px) and (max-width: 768px)){
+    #form .form_element label {
+        font-size: clamp(0.5em, 1.2em, 2em);
+    }
+
+    #form .form_element input {
+        font-size: clamp(0.5em, 1.2em, 2em);
+    }
+
+    .container {
+        justify-content: center;
+    }
 
 
 }
