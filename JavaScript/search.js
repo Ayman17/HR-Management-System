@@ -45,7 +45,7 @@ function search()
                 <td>
                     <!-- <button>Approve</button>
                     <button onclick="reject(${e.id}, this)" id"reject">Reject</button> -->
-                    <button onclick="edit(${e.id})" id="edit">Edit</button>
+                    <button onclick="edit(${e.id})" id="edit">Info</button>
                 </td>
             </tr>`;
         }

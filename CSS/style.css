@@ -318,6 +318,10 @@ input[type="search"]
     height: 100vh;
 }
 
+#search_lable {
+    font-size: 30px;
+}
+
 .searchTable
 {
     padding: 25px;
