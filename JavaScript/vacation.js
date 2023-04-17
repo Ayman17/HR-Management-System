@@ -26,6 +26,20 @@ function addNewVacation() {
         let empData = getEmployeeInfo(empID);
         empData.vacations.push(JSON.stringify(vacation));
         localStorage.setItem(empID, JSON.stringify(empData));
+
+        const contentDiv = document.getElementById("content_div");
+        const myH3 = document.createElement('h3');
+        myH3.textContent = 'Vacation request submitted successfully :)';
+        contentDiv.append(myH3);
+        contentDiv.append(document.createElement('br'));
+
+        const myButton = document.createElement('button');
+        myButton.textContent = 'Submit another request';
+        myButton.setAttribute("onclick", "resubmit()");
+        contentDiv.append(myButton);
+
+        contentDiv.classList.add('centered_data')
+        document.getElementById("formDiv").style.display = 'none';
     }else {
         alert(errorMessages[infoValidation]);
     }
@@ -73,6 +87,10 @@ function isValidVacation(vacation){
 function main() {
     formElement.addEventListener("submit", stopDefaultSubmit);
     submitButton.addEventListener("click", addNewVacation);
+}
+
+function resubmit(){
+    window.location.href = 'vacation.html';
 }
 
 main();
