@@ -65,9 +65,9 @@ input[type=number] {
 
 }
 
-/* .homeImage{
+.homeImage{
     width: 40vw;
-} */
+} 
 
 .centered_data{
     display: flex;
