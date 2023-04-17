@@ -32,7 +32,7 @@ function search()
     for (let i = 0; i < valuesArray.length; ++i)
     {
         let e = JSON.parse(valuesArray[i]);
-        if (requiredName == e.firstName)
+        if (requiredName === e.firstName)
         {
             flag = false;
             eTableData += 

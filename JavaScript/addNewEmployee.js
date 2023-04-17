@@ -35,7 +35,7 @@ function addNewEmployee() {
         actualVacation: document.getElementById("vacation_actual").value,
         salary: document.getElementById("salary").value,
         birthDate: document.getElementById("birth_date").value,
-        status: null,
+        vacations: [],
     };
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
