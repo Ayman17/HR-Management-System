@@ -42,6 +42,10 @@ function checkSmallScreen(){
     }
 }
 
+function OurProject(){
+    window.location.href = 'HrHome.html';
+}
+
 
 
 //The Main function 
