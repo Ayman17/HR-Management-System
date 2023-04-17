@@ -58,10 +58,18 @@ header .navigation {
 
 .logo {
     margin: 0 auto;
+    /*aly 3aml al line el ta7t da clown fash5555, lama tasyb al style wa tygy t7taly margin 100px hana
+    dah enta law azd tdmarly el responsive mosh hat3ml kda*/
     margin: 100px;
     margin-top: 20px;
     flex: 1;
     color: var(--second-secondary-color);
+}
+
+@media only screen and (max-width: 769px) {
+    .logo{
+        margin: 2vw;
+    }
 }
 
 .navigation {

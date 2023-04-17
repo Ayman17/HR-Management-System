@@ -96,20 +96,11 @@ header .navigation {
 }
 
 .logo {
-    /* margin: 0 auto;
-    margin: 100px; */
     margin-top: 20px;
     flex: 1;
     color: var(--second-secondary-color);
 }
 
-/* .logo_container{
-    
-    display: inline;
-    width: 100%;
-    text-align: center;
-    background-color: red;
-} */
 
 .navigation {
     display: flex;
