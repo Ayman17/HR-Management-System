@@ -189,9 +189,19 @@ input[type="radio"] {
 }
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"]
+{
     border: none;
     background-color: var(--first-secondary-color);
+    border-radius: 20px;
+    font-size: 20px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.deleteButton {
+    border: none;
+    background-color: #ED2939;
     border-radius: 20px;
     font-size: 20px;
     height: 30px;

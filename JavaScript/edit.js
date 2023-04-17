@@ -26,6 +26,7 @@ document.getElementById("birth_date").value = JSON.parse(localStorage.getItem(eI
 // edit validation
 const submitButton = document.getElementById('submit');
 const formElement = document.getElementById('form');
+const deleteButton = document.getElementById('deleteButton');
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const maxDate = new Date()
@@ -114,9 +115,20 @@ function isValidEmployee(employee){
     return statusCodes.valid;
 }
 
+function deleteEmployee() {
+   const employeeName = `${document.getElementById('first_name').value} ${document.getElementById('last_name').value}`;
+   const id = document.getElementById('id').value;
+
+   if (confirm(`Are you sure you want to delete ${employeeName}?`)){
+    localStorage.removeItem(id);
+   }
+   
+}
+
 function main() {
     formElement.addEventListener("submit", stopDefaultSubmit);
     submitButton.addEventListener("click", addNewEmployee);
+    deleteButton.addEventListener("click", deleteEmployee);
 }
 
 main();
