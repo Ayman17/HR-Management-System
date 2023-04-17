@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Accept and Reject Vacations
+        Vacations List
     </title>
     <link rel="stylesheet" href="/CSS/Root_Style.css">
     <link rel="stylesheet" href="../CSS/style.css">
@@ -35,34 +35,21 @@
             
             <div id="vacationTable">
                 <h1>
-                    Submitted Vacations
+                    Vacations List
                 </h1>
-                <table class="searchTable" id="searchTable">
-                    <thead>
-                        <tr>
-                            <th>id</th>
-                            <th>From</th>
-                            <th>To</th>
-                            <th>Reason</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="Tbody">
-                        <tr>  
-                            <td>20</td>
-                            <td>20/8</td>
-                            <td>22/8</td>
-                            <td>sick leave</td>
-                            <td>
-                                <button>Approve</button>
-                                <button>Reject</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="vacationButtons">
+                    <button onclick="displayVacations('submitted')">Submitted</button>
+                    <button onclick="displayVacations('approved')">Approved</button>
+                    <button onclick="displayVacations('rejected')">Rejected</button>
+                    <button onclick="displayVacations('all')">All Vacations</button>
+                </div>
+                <div id="vacTable">
+                
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script src="../JavaScript/Home.js"></script>
+<script src="../JavaScript/vacationList.js"></script>
 </html>
