@@ -444,7 +444,7 @@ thead {
     header {
         flex-direction: row;
         justify-content: start;
-        width: 100%;
+        width: 100vw;
         min-height: 0;
         height: 10vh;
         margin-left: 5vw;
@@ -487,6 +487,7 @@ thead {
         transition: all 0.3s ease-in-out;
         cursor: pointer;
         align-items: center;
+        margin: 1vw;
     }
 
     .navbar_toggle span {
@@ -498,28 +499,13 @@ thead {
     }
 
     .navbar_toggle.active span{
-        /* transform: rotate(90deg) translate(2vh, 1.5vh); */
         display: none;
         text-align: center;
         
     }
 
-    
-
-    /* .navbar_toggle.active span:nth-child(2) {
-        transform: rotate(90deg);
-        display: none;
-    }
-
-    .navbar_toggle.active span:nth-child(3) {
-        transform: rotate(90deg) translate(-2vh, -1.5vh);
-        display: none;
-    } */
-
-
     .toggle_container {
         display: flex;
-        /* flex-wrap: wrap; */
         flex-direction: row;
         position: absolute;
         gap: 20vw;
