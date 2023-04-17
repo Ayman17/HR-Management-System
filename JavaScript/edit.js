@@ -6,6 +6,7 @@ document.getElementById("last_name").value = JSON.parse(localStorage.getItem(eID
 document.getElementById("email").value = JSON.parse(localStorage.getItem(eID)).email;
 document.getElementById("address").value = JSON.parse(localStorage.getItem(eID)).address;
 document.getElementById("phone").value = JSON.parse(localStorage.getItem(eID)).phone;
+let empVacations = localStorage.getItem(eID).vacations;
 
 if (JSON.parse(localStorage.getItem(eID)).gender === 'male')
     document.querySelector("#male").checked = true;
@@ -62,6 +63,7 @@ function addNewEmployee() {
         actualVacation: document.getElementById("vacation_actual").value,
         salary: document.getElementById("salary").value,
         birthDate: document.getElementById("birth_date").value,
+        vacations: JSON.parse(localStorage.getItem(eID)).vacations,
     };
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
@@ -108,6 +110,8 @@ function isValidEmployee(employee){
 
     for (const info in employee){
         if (employee[info] == null){
+            console.log(localStorage.getItem(eID))
+            console.log(info);
             return statusCodes.messing;
         }
     }
