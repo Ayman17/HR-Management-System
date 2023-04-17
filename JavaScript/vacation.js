@@ -13,37 +13,41 @@ const statusCodes = {
 };
 
 
-function addNewVacation() {    
-    let empID = document.getElementById("id").value;
-    const vacation = {
-        fromDate: document.getElementById("from_date").value,
-        toDate: document.getElementById("to_date").value,
-        reason: document.getElementById("reason").value,
-        status: "submitted",
-    };
-    const infoValidation = isValidVacation(vacation)
-    if (infoValidation == statusCodes.valid){
-        let empData = getEmployeeInfo(empID);
-        empData.vacations.push(JSON.stringify(vacation));
-        localStorage.setItem(empID, JSON.stringify(empData));
+function addNewVacation() {
+    try {    
+        let empID = document.getElementById("id").value;
+        const vacation = {
+            fromDate: document.getElementById("from_date").value,
+            toDate: document.getElementById("to_date").value,
+            reason: document.getElementById("reason").value,
+            status: "submitted",
+        };
+        const infoValidation = isValidVacation(vacation)
+        if (infoValidation == statusCodes.valid){
+            let empData = getEmployeeInfo(empID);
+            empData.vacations.push(JSON.stringify(vacation));
+            localStorage.setItem(empID, JSON.stringify(empData));
+            const contentDiv = document.getElementById("content_div");
+            const myH3 = document.createElement('h3');
+            myH3.textContent = 'Vacation request submitted successfully :)';
+            contentDiv.append(myH3);
+            contentDiv.append(document.createElement('br'));
 
-        const contentDiv = document.getElementById("content_div");
-        const myH3 = document.createElement('h3');
-        myH3.textContent = 'Vacation request submitted successfully :)';
-        contentDiv.append(myH3);
-        contentDiv.append(document.createElement('br'));
+            const myButton = document.createElement('button');
+            myButton.textContent = 'Submit another request';
+            myButton.setAttribute("onclick", "resubmit()");
+            contentDiv.append(myButton);
 
-        const myButton = document.createElement('button');
-        myButton.textContent = 'Submit another request';
-        myButton.setAttribute("onclick", "resubmit()");
-        contentDiv.append(myButton);
-
-        contentDiv.classList.add('centered_data')
-        document.getElementById("formDiv").style.display = 'none';
-    }else {
-        alert(errorMessages[infoValidation]);
+            contentDiv.classList.add('centered_data')
+            document.getElementById("formDiv").style.display = 'none';
+        }else {
+            alert(errorMessages[infoValidation]);
+        } 
     }
-}
+    catch (e) {
+        console.log(e);
+    }
+    }
 
 function stopDefaultSubmit(e) {
     e.preventDefault();
@@ -80,7 +84,6 @@ function isValidVacation(vacation){
         console.log("test4");
         return statusCodes.wrong;
     }
-
     return statusCodes.valid;
 }
 

@@ -9,8 +9,8 @@ function displayVacations(status) {
                 <th>id</th>
                 <th>From</th>
                 <th>To</th>
-                <th>Reason</th>
-                <th>Action</th>
+                <th class="reason">Reason</th>
+                <th class="action">Action</th>
             </tr>
         </thead>
         <tbody id="Tbody">

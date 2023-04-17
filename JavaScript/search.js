@@ -34,7 +34,7 @@ function search()
         let e = JSON.parse(valuesArray[i]);
 
         if (typeof e.firstName === 'string' && 
-        e.firstName.toLowerCase().includes(requiredName.toLowerCase()))
+        e.firstName.toLowerCase().startsWith(requiredName.toLowerCase()))
         {
             flag = false;
             eTableData += 

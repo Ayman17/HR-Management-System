@@ -17,9 +17,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80vw;
+    /* width: 80vw; */
     min-height: 100vh;
-    margin: 20px;
+    /* margin: 0 20px; */
+
+    margin-left: 20vw;
+    width: 78vw;
 
 }
 

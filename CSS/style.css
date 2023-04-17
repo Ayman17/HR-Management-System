@@ -61,13 +61,13 @@ input[type=number] {
     align-items: center;
     width: 80vw;
     min-height: 100vh;
-    margin: 20px;
+    margin: 0 20px;
 
 }
 
-.homeImage{
+/* .homeImage{
     width: 40vw;
-}
+} */
 
 .centered_data{
     display: flex;
@@ -305,7 +305,6 @@ input[type="search"]
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80vw;
     height: 100vh;
 }
 
@@ -316,6 +315,9 @@ input[type="search"]
     font-size: 20px;
     background-color: var(--back-color);
     color: var(--second-secondary-color);
+    width: 60vw;
+    text-align: center;
+
 }
 
 .searchTable button {
@@ -330,17 +332,37 @@ input[type="search"]
     color: var(--back-color);
 }
 
+.searchTable thead {
+    background-color: var(--primary-color);
+}
+
+.searchTable td {
+    padding: 10px 0px;
+    border-bottom: 2px solid var(--second-secondary-color);
+
+}
+
+.searchTable .reason {
+  width: 40%;
+}
+.searchTable .action {
+  width: 25%;
+}
+
 /*------------------------------------------------*/
 
 /* Regect and Accept Page */
 
 /* Table Syle */
-.table {
+
+/* i think we don't use this anywhere */
+/* .table {
     padding: 50px;
     margin: 15px;
     font-size: 30px;
     background-color: var(--back-color);
     color: var(--second-secondary-color);
+
 }
 
 thead {
@@ -350,10 +372,9 @@ thead {
 .table td {
     padding: 10px;
 }
-
 .table button {
     font-size: 20px;
-}
+} */
 
 
 /*------------------------------------------------*/
