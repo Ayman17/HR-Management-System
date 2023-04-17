@@ -24,9 +24,8 @@ function addNewVacation() {
     const infoValidation = isValidVacation(vacation)
     if (infoValidation == statusCodes.valid){
         let empData = getEmployeeInfo(empID);
-        console.log(empData.vacations);
-        //empData.vacations.push(JSON.stringify(vacation));
-        //localStorage.setItem(empID, empData);
+        empData.vacations.push(JSON.stringify(vacation));
+        localStorage.setItem(empID, JSON.stringify(empData));
     }else {
         alert(errorMessages[infoValidation]);
     }
@@ -37,7 +36,7 @@ function stopDefaultSubmit(e) {
 }
 
 function getEmployeeInfo(id) {
-    const employee = localStorage.getItem(id);
+    const employee = JSON.parse(localStorage.getItem(id));
     return employee;
 }
 
