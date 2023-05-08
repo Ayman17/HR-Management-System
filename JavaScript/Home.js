@@ -2,7 +2,7 @@
 const el = document.getElementById("animate");
 
 //The hamburger
-const toggle = document.querySelector('.navbar_toggle');
+const menu = document.querySelector('.menu');
 const nav = document.querySelector('.navigation');
 const content = document.querySelector('.content');
 
@@ -23,7 +23,7 @@ function mouseOut(){
 }
 
 function hamburgerClicked(){
-    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
     if (nav) nav.classList.toggle('active');
     if (content) content.classList.toggle('active');
     if (homeHeader) homeHeader.classList.toggle('active');
@@ -43,7 +43,20 @@ function checkSmallScreen(){
 }
 
 function OurProject(){
-    window.location.href = 'HrHome.html';
+  window.location.href = 'HrHome.html';
+
+  const currentPagePath = window.location.pathname;
+
+  // Loop over all links in the navigation
+  const navLinks = document.querySelectorAll('.navigation a');
+  navLinks.forEach(link => {
+    // Check if the link's href matches the current page path
+    if (link.getAttribute('href') === currentPagePath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
 }
 
 
@@ -56,7 +69,7 @@ function Main() {
     window.open("HrHome.html");
     */
 
-    toggle.addEventListener('click', hamburgerClicked);
+    menu.addEventListener('click', hamburgerClicked);
 
     /*
     Fakes el animation fe el home page.

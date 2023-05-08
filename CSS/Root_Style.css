@@ -1,5 +1,4 @@
-/* Basic Syels*/
-
+/* Root */
 :root {
     --back-color: #2C3333;
     --primary-color: #2E4F4F;
@@ -8,23 +7,50 @@
     --third-secondary-color: #bfbfbf;
 }
 
+html {
+    font-size: 16px;
+}
+
+/*Responsive Rem size for all the pages */
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 576px) {
+    html {
+      font-size: 12px;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+}
+  
+@media screen and (min-width: 992px) {
+    html {
+      font-size: 16px;
+    }
+}
+  
+@media screen and (min-width: 1200px) {
+    html {
+      font-size: 18px;
+    }
+}
+  
+
 body {
     background-color: var(--primary-color);
-    margin: 0;
     color: var(--second-secondary-color);
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-size: 45px;
-    text-align: left;
-    /* margin: 20px; */
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style-type: none;
-}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -37,80 +63,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
-
-/*------------------------------------------------*/
-
-/* Navigation Bar */
-
-header {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-evenly;
-    background-color: var(--back-color);
-    width: 20vw;
-    transition: all 0.9s ease-in-out;
-}
-
-header .navigation {
-    flex: 6;
-}
-
-.logo {
-    margin: 0 auto;
-    /*aly 3aml al line el ta7t da clown fash5555, lama tasyb al style wa tygy t7taly margin 100px hana
-    dah enta law azd tdmarly el responsive mosh hat3ml kda*/
-    margin: 100px;
-    margin-top: 20px;
-    flex: 1;
-    color: var(--second-secondary-color);
-}
-
-@media only screen and (max-width: 769px) {
-    .logo{
-        margin: 2vw;
-    }
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.navigation a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: var(--second-secondary-color);
-}
-
-.navigation a:hover {
-    background-color: var(--second-secondary-color);
-    color: var(--back-color);
-}
-
-.navigation a.active,
-.navigation a.active:hover {
-    background-color: var(--primary-color);
-    color: var(--second-secondary-color);
-}
-
-.sidebar {
-    display: block;
-    top: 0;
-    position: fixed;
-    height: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
-.content {
-    margin-left: 20vw;
-    width: 78vw;
-}
-
 
