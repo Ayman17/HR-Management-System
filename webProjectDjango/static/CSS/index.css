@@ -1,0 +1,72 @@
+@import "./Root_Style.css";
+
+
+
+
+.projects {
+    background: var(--second-secondary-color);
+    margin: 1rem;
+    padding: 3rem;
+    border-radius: 1%;
+}
+
+
+.projects h2 {
+    font-size: 3.3rem;
+    color: var(--second-secondary-color);
+}
+.projects p {
+    font-size: 1rem;
+    color: var(--second-secondary-color);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(56, 55, 55, 0.1), var(--primary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(100%);
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }

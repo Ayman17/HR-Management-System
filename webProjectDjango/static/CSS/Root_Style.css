@@ -1,0 +1,66 @@
+/* Root */
+:root {
+    --back-color: #2C3333;
+    --primary-color: #2E4F4F;
+    --first-secondary-color: #0E8388;
+    --second-secondary-color: #CBE4DE;
+    --third-secondary-color: #bfbfbf;
+}
+
+html {
+    font-size: 16px;
+}
+
+/*Responsive Rem size for all the pages */
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 576px) {
+    html {
+      font-size: 12px;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+}
+  
+@media screen and (min-width: 992px) {
+    html {
+      font-size: 16px;
+    }
+}
+  
+@media screen and (min-width: 1200px) {
+    html {
+      font-size: 18px;
+    }
+}
+  
+
+body {
+    background-color: var(--primary-color);
+    color: var(--second-secondary-color);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+

@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+
+</head>
+
+<body class="home">
+    <h1 id="Project_home">Web Technology Projects</h1>
+    <section class="projects">
+        <div class="projects-container">
+            <a href="{% url 'hr_home' %}" onClick="OurProject()">
+                <div class="project-box">
+                    <img src="{% static 'images/HR.jpg' %}" alt="project image">
+                    <div class="project-layer">
+                        <h2>Human Resources</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, porro esse. Alias quas eos neque reiciendis officiis minima officia non esse vel asperiores repudiandae rerum saepe ipsam debitis, omnis quo.</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="project-box">
+                <img src="{% static 'images/SA.png' %}" alt="project image">
+                <div class="project-layer">
+                    <h2>Students Affairs</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, porro esse. Alias quas eos neque reiciendis officiis minima officia non esse vel asperiores repudiandae rerum saepe ipsam debitis, omnis quo.</p>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="{% static 'images/HS.png' %}" alt="project image">
+                <div class="project-layer">
+                    <h2>Higher Studies</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, porro esse. Alias quas eos neque reiciendis officiis minima officia non esse vel asperiores repudiandae rerum saepe ipsam debitis, omnis quo.</p>
+                </div>
+            </div>
+        
+            <div class="project-box">
+                <img src="{% static 'images/LS.png' %}" alt="project image">
+                <div class="project-layer">
+                    <h2>Laboratory Tracking</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, porro esse. Alias quas eos neque reiciendis officiis minima officia non esse vel asperiores repudiandae rerum saepe ipsam debitis, omnis quo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'JavaScript/Home.js' %}"></script>
+</body>
+
+</html>

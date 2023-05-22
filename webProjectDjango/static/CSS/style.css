@@ -1,0 +1,402 @@
+@import "./Root_Style.css";
+
+
+/*For All The Pages */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    min-height: 100vh;
+    margin-left: 3rem;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--back-color);
+    width: 20rem;
+    transition: all 0.9s ease-in-out;
+}
+
+.logo {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin: 1rem;
+    flex: 1;
+    color: var(--second-secondary-color);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.navigation a {
+    padding: 1rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--second-secondary-color);
+}
+
+.navigation a:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
+}
+
+.navigation a.active,
+.navigation a.active:hover {
+    background-color: var(--primary-color);
+    color: var(--second-secondary-color);
+    width: 20rem;
+}
+
+/* Buttons */
+button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: var(--back-color);
+    color: var(--second-secondary-color);
+    border: none;
+    transition: font-size 0.5s ease;
+    border-radius: 2rem;
+    margin:0.5rem;
+}
+
+button:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
+}
+
+/* Inputs */
+input {
+    border: none;
+    border-bottom: 0.2rem solid var(--second-secondary-color);
+    background: none;
+    color: var(--second-secondary-color);
+    outline: none;
+    font-size: 2rem;
+    margin-top:0.5rem;
+}
+
+input,
+label {
+    width: 100%;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-top: 2rem;
+    accent-color: var(--first-secondary-color);
+}
+
+input[type="submit"],
+input[type="reset"]
+{
+    border: none;
+    background-color: var(--first-secondary-color);
+    border-radius: 2rem;
+    font-size: 2rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.deleteButton {
+    border: none;
+    background-color: #ED2939;
+    border-radius: 2rem;
+    font-size: 2rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
+}
+
+label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* for calender icon to be white  */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    z-index: 1;
+    
+}
+
+/*------------------------------------------------*/
+
+/* Home Page */
+.homeImage{
+    width: 40vw;
+}
+
+#home-header {
+    font-size: 2.3rem;
+}
+
+
+/* Add Employee Page */
+
+
+
+/* form */
+
+.form_div {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 10px 2rem rgb(46, 46, 46);
+    text-align: left;
+    width: 80vw;
+    background-color: var(--back-color);
+    color: var(--second-secondary-color);
+    border-radius: 3rem 3rem 3rem 3rem;
+    overflow: hidden;
+}
+
+.form_div h1 {
+    font-size: 3rem;
+}
+
+#form label, input {
+    font-size: 1.3rem;
+}
+
+.form_element {
+    float: left;
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form_element input {
+    font-size: 1.3rem;
+}
+
+.inline_form_element {
+    width: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.empinfo label {
+    color: var(--second-secondary-color);
+}
+
+#adress_input {
+    display: block;
+    overflow: hidden;
+}
+
+#adress_input input {
+    width: 98%;
+}
+
+/*------------------------------------------------*/
+
+/* Search for Employee Page */
+
+.search {
+    font-size: 5rem;
+    font-style: normal;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+.searchSection 
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+}
+
+input[type="search"]
+{
+    width: 80%;
+}
+
+#tableDiv{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#search_lable {
+    font-size: 3rem;
+}
+
+.searchTable
+{
+    padding: 2.5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+    background-color: var(--back-color);
+    color: var(--second-secondary-color);
+    width: 60vw;
+    text-align: center;
+
+}
+
+.searchTable button {
+    border: none;
+    background-color: var(--first-secondary-color);
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.searchTable button:hover {
+    background-color: var(--second-secondary-color);
+    color: var(--back-color);
+}
+
+.searchTable thead {
+    background-color: var(--primary-color);
+}
+
+.searchTable td {
+    padding: 1rem 0px;
+    border-bottom: 0.2rem solid var(--second-secondary-color);
+
+}
+
+.searchTable .reason {
+  width: 40%;
+}
+.searchTable .action {
+  width: 25%;
+}
+
+
+/*submit vacation*/
+
+.idVacation{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#reason{
+    border: none;
+    border-bottom: 0.2rem solid var(--second-secondary-color);
+    background: none;
+    color: var(--second-secondary-color);
+    outline: none;
+    font-size: 1.3rem;
+    margin-top:0.5rem;
+}
+
+
+/*------------------------------------------------*/
+
+/* vacation list */
+
+#vacationTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vacationTable h1{
+    font-size: 2.5rem;
+}
+
+#vacationButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    font-size: 1.7rem;
+    overflow: hidden;
+}
+
+
+
+/*------------------------------------------------*/
+
+/* Responsive and Menu */
+
+.menu {
+    display: none;
+    font-size: 2rem;
+    border: 0.2rem solid var(--primary-color);
+    padding: .3rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.menu {
+    color: var(--first-secondary-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 769px) {
+    
+    .menu {
+        display: flex;
+    }
+
+    .menu.active {
+        color: #07c8ce;
+        border: .2rem solid;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        min-height: 0;
+        height: 10vh;
+        position: absolute;
+        background-color: var(--back-color);
+    }
+
+    .menu-bar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        background-color: var(--back-color);
+        z-index: 3;
+    }
+
+    .content {
+        margin: 1vw;
+        margin-top: 10vh;
+        
+    }
+
+}
