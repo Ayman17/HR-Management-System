@@ -93,7 +93,8 @@ function main() {
 }
 
 function resubmit(){
-    window.location.href = 'vacation.html';
+    const link = document.getElementById('vacation_url').getAttribute("data-url");
+    window.location.href = link;
 }
 
 main();

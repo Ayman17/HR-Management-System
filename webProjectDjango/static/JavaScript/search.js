@@ -97,5 +97,7 @@ function edit (id)
 {
     // use the localStorage to store the sent id in order to easy access the required employee for edit
     localStorage.setItem('editID', id);
-    window.location.href = "empInfo.html";
+    link = document.getElementById("employee_info_url").getAttribute("data-url");
+    console.log(link);
+    window.location.href = link;
 }

@@ -93,7 +93,8 @@ function main() {
 }
 
 function addNew(){
-    window.location.href = 'addNew.html';
+    const link = document.getElementById("current_url").getAttribute("data-url");
+    window.location.href = link;
 }
 
 main();
