@@ -29,6 +29,7 @@ urlpatterns = [
     path('vacation/submit/', views.submit_vacation, name='submit_vacation'),
     path('ajax/addNewEmployee', views.ajax_add_new_employee, name='ajax_add_new_employee'),
     path('ajax/searchEmployee', views.ajax_search_employee, name='ajax_search_employee'),
+    path('ajax/getEmployeeById', views.ajax_get_employee_by_id, name='ajax_get_employee_by_id'),
 ]
 
 if settings.DEBUG:

@@ -5,6 +5,7 @@ import re
 from .models import Employee
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Q
 
 def index(request):
     return render(request, 'Index.html')
@@ -60,40 +61,52 @@ def ajax_add_new_employee(request):
     else:
         return JsonResponse({'error': 'Invalid request method'})
 
+
 def ajax_search_employee(request):
-    print("hello")
     if request.method == 'GET':
         name = request.GET.get('name')
-        employees = Employee.objects.filter(first_name=name)
+        query = Q(first_name__icontains=name)
+
+        # Check if name consists of two words
+        if len(name.split()) == 2:
+            first_name, last_name = name.split()
+            query |= Q(first_name__icontains=first_name, last_name__icontains=last_name)
+
+        employees = Employee.objects.filter(query)
         results = []
         for employee in employees:
-            employee_data = {
+            result = {
                 'id': employee.id,
                 'firstName': employee.first_name,
+                'lastName': employee.last_name,
                 'phone': employee.phone,
+                # Include other desired fields
             }
-            results.append(employee_data)
-            pass
+            results.append(result)
         return JsonResponse(results, safe=False)
 
-# def search_employee(request):
-#     if request.method == 'GET':
-#         name = request.GET.get('name')
-#         query = Q(first_name__icontains=name)
+def ajax_get_employee_by_id(request):
+    if request.method == 'GET':
+        id = request.GET.get('id')[0]
+        employee = getEmployee(id)
+        print(employee)
+        return JsonResponse(employee, safe=False)
 
-#         # Check if name consists of two words
-#         if len(name.split()) == 2:
-#             first_name, last_name = name.split()
-#             query |= Q(first_name__icontains=first_name, last_name__icontains=last_name)
 
-#         employees = Employee.objects.filter(query)
-#         results = []
-#         for employee in employees:
-#             result = {
-#                 'first_name': employee.first_name,
-#                 'last_name': employee.last_name,
-#                 'email': employee.email,
-#                 # Include other desired fields
-#             }
-#             results.append(result)
-#         return JsonResponse(results, safe=False)
+def getEmployee(id):
+    employee = Employee.objects.get(id=id)
+    result = {
+            'firstName': employee.first_name,
+            'secondName': employee.last_name,
+            'email': employee.email,
+            'address': employee.address,
+            'id': employee.id,
+            'phone': employee.phone,
+            'gender': employee.gender,
+            'maritalStatus': employee.marital_status,
+            'availableVacation': employee.vacation_available,
+            'actualVacation': employee.vacation_actual,
+            'salary': employee.salary,
+            'birthDate': employee.birth_date,
+    }
+    return result

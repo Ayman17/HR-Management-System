@@ -1,29 +1,3 @@
-// change the values of edit page to the required one to edit
-let eID = localStorage.getItem('editID');
-document.getElementById("id").value = eID;
-document.getElementById("first_name").value = JSON.parse(localStorage.getItem(eID)).firstName;
-document.getElementById("last_name").value = JSON.parse(localStorage.getItem(eID)).secondName;
-document.getElementById("email").value = JSON.parse(localStorage.getItem(eID)).email;
-document.getElementById("address").value = JSON.parse(localStorage.getItem(eID)).address;
-document.getElementById("phone").value = JSON.parse(localStorage.getItem(eID)).phone;
-let empVacations = localStorage.getItem(eID).vacations;
-
-if (JSON.parse(localStorage.getItem(eID)).gender === 'male')
-    document.querySelector("#male").checked = true;
-else
-    document.querySelector("#female").checked = true;
-
-if (JSON.parse(localStorage.getItem(eID)).maritalStatus === 'married')
-    document.querySelector("#married").checked = true;
-else
-    document.querySelector("#unmarried").checked = true;
-
-document.getElementById("vacation_actual").value = JSON.parse(localStorage.getItem(eID)).actualVacation;
-document.getElementById("vacation").value = JSON.parse(localStorage.getItem(eID)).availableVacation;
-document.getElementById("salary").value = JSON.parse(localStorage.getItem(eID)).salary;
-document.getElementById("birth_date").value = JSON.parse(localStorage.getItem(eID)).birthDate;
-
-
 // edit validation
 const submitButton = document.getElementById('submit');
 const formElement = document.getElementById('form');
@@ -33,6 +7,41 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const maxDate = new Date()
 const minDate = new Date("1900-1-1");
 const phoneNumberRegex = /^01{1}[0125]{1}\d{8}/;
+
+
+
+async function  loadEmployeeData() {
+    const searchParams = new URLSearchParams(window.location.search);
+    const id = searchParams.get('id');
+    console.log(id);
+    const employee = await ajaxGetEmployeeById(id);
+    console.log(employee);
+
+    // change the values of edit page to the required one to edit
+    document.getElementById("id").value = employee.id;
+    document.getElementById("first_name").value = employee.firstName;
+    document.getElementById("last_name").value = employee.secondName;
+    document.getElementById("email").value = employee.email;
+    document.getElementById("address").value = employee.address;
+    document.getElementById("phone").value = employee.phone;
+
+    if (employee.gender === 'male')
+        document.querySelector("#male").checked = true;
+    else
+        document.querySelector("#female").checked = true;
+
+    if (employee.maritalStatus === 'married')
+        document.querySelector("#married").checked = true;
+    else
+        document.querySelector("#unmarried").checked = true;
+
+    document.getElementById("vacation_actual").value = employee.actualVacation;
+    document.getElementById("vacation").value = employee.availableVacation;
+    document.getElementById("salary").value = employee.salary;
+    document.getElementById("birth_date").value = employee.birthDate;
+    
+}
+
 
 const errorMessages = {
     2: "Not vaild employee information",
@@ -50,21 +59,26 @@ function stopDefaultSubmit(e) {
 }
 
 function addNewEmployee() {
-    const employee = {
-        id: document.getElementById("id").value,
-        firstName: document.getElementById("first_name").value,
-        secondName: document.getElementById("last_name").value,
-        email: document.getElementById("email").value,
-        address: document.getElementById("address").value,
-        phone: document.getElementById("phone").value,
-        gender: document.querySelector("input[name=gender]:checked").value,
-        maritalStatus: document.querySelector("input[name=marital_status]:checked").value,
-        availableVacation: document.getElementById("vacation").value,
-        actualVacation: document.getElementById("vacation_actual").value,
-        salary: document.getElementById("salary").value,
-        birthDate: document.getElementById("birth_date").value,
-        vacations: JSON.parse(localStorage.getItem(eID)).vacations,
-    };
+    // const employee = {
+    //     id: document.getElementById("id").value,
+    //     firstName: document.getElementById("first_name").value,
+    //     secondName: document.getElementById("last_name").value,
+    //     email: document.getElementById("email").value,
+    //     address: document.getElementById("address").value,
+    //     phone: document.getElementById("phone").value,
+    //     gender: document.querySelector("input[name=gender]:checked").value,
+    //     maritalStatus: document.querySelector("input[name=marital_status]:checked").value,
+    //     availableVacation: document.getElementById("vacation").value,
+    //     actualVacation: document.getElementById("vacation_actual").value,
+    //     salary: document.getElementById("salary").value,
+    //     birthDate: document.getElementById("birth_date").value,
+    //     vacations: JSON.parse(localStorage.getItem(eID)).vacations,
+    // };
+    const searchParams = new URLSearchParams(window.location.href);
+    const id = searchParams.get('id');
+    console.log(id);
+    const employee = ajaxGetEmployeeById(id);
+
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
 
@@ -110,7 +124,7 @@ function isValidEmployee(employee){
 
     for (const info in employee){
         if (employee[info] == null){
-            console.log(localStorage.getItem(eID))
+            // console.log(localStorage.getItem(eID))
             console.log(info);
             return statusCodes.messing;
         }
@@ -129,7 +143,20 @@ function deleteEmployee() {
    
 }
 
+async function ajaxGetEmployeeById(id) {
+    let employee = {};
+    await $.ajax ({
+        type: "GET",
+        url: '/ajax/getEmployeeById',
+        data: {"id": id},
+        success: function (response) {employee = response;},
+        error: function (error) {console.log(error)},
+    })
+    return employee;
+}
+
 function main() {
+    loadEmployeeData();
     formElement.addEventListener("submit", stopDefaultSubmit);
     submitButton.addEventListener("click", addNewEmployee);
     deleteButton.addEventListener("click", deleteEmployee);

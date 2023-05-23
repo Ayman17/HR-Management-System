@@ -20,7 +20,6 @@ async function search()
     let requiredName = document.getElementById("searchName").value;
     
     // retrieve all data in the localstrorage in this array
-    // const valuesArray = Object.values(localStorage);
     const valuesArray = await ajaxSearchByName(requiredName);
 
     // to store the value of each row in the output table
@@ -28,29 +27,6 @@ async function search()
 
     //flag if nothing is found
     let flag = true;
-
-    // // searching in the data
-    // for (let i = 0; i < valuesArray.length; ++i)
-    // {
-    //     let e = JSON.parse(valuesArray[i]);
-
-    //     if (typeof e.firstName === 'string' && 
-    //     e.firstName.toLowerCase().startsWith(requiredName.toLowerCase()))
-    //     {
-    //         flag = false;
-    //         eTableData += 
-    //         `<tr>
-    //             <td>${e.firstName}</td>
-    //             <td>${e.phone}</td>
-    //             <td>${e.id}</td>
-    //             <td>
-    //                 <!-- <button>Approve</button>
-    //                 <button onclick="reject(${e.id}, this)" id"reject">Reject</button> -->
-    //                 <button onclick="edit(${e.id})" id="edit">Info</button>
-    //             </td>
-    //         </tr>`;
-    //     }
-    // }
 
     for (let i in valuesArray) {
         flag = false;
@@ -125,8 +101,6 @@ function deleteRow(button) {
 function edit (id)
 {
     // use the localStorage to store the sent id in order to easy access the required employee for edit
-    localStorage.setItem('editID', id);
-    link = document.getElementById("employee_info_url").getAttribute("data-url");
-    console.log(link);
+    link = document.getElementById("employee_info_url").getAttribute("data-url") + "?id=" + id;
     window.location.href = link;
 }
