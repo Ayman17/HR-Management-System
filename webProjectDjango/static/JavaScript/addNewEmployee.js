@@ -41,23 +41,27 @@ function addNewEmployee() {
     if (infoValidation == statusCodes.valid){
         // localStorage.setItem(employee.id, JSON.stringify(employee));
         ajaxSaveEmployee(employee);
+        displayAddedEmployee();
 
-        const contentDiv = document.getElementById("content_div");
-        const myH3 = document.createElement('h3');
-        myH3.textContent = 'Employee added successfully :)';
-        contentDiv.append(myH3);
-        contentDiv.append(document.createElement('br'));
-
-        const myButton = document.createElement('button');
-        myButton.textContent = 'Add another employee';
-        myButton.setAttribute("onclick", "addNew()");
-        contentDiv.append(myButton);
-
-        contentDiv.classList.add('centered_data')
-        document.getElementById("formDiv").style.display = 'none';
     }else {
         alert(errorMessages[infoValidation]);
     }
+}
+
+function displayAddedEmployee() {
+    const contentDiv = document.getElementById("content_div");
+    const myH3 = document.createElement('h3');
+    myH3.textContent = 'Employee added successfully :)';
+    contentDiv.append(myH3);
+    contentDiv.append(document.createElement('br'));
+
+    const myButton = document.createElement('button');
+    myButton.textContent = 'Add another employee';
+    myButton.setAttribute("onclick", "addNew()");
+    contentDiv.append(myButton);
+
+    contentDiv.classList.add('centered_data')
+    document.getElementById("formDiv").style.display = 'none';
 }
 
 function getEmployeeInfo(id) {
@@ -90,7 +94,7 @@ function isValidEmployee(employee){
 
 function ajaxSaveEmployee(employee) {
     $.ajax({
-        url: '/ajax/',
+        url: '/ajax/addNewEmployee',
         type: 'POST',
         data: employee,
         success: function (resposnse) {console.log(resposnse)},

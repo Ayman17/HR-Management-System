@@ -51,7 +51,7 @@ def addNewEmployeeForm(employeeData):
 
 
 @csrf_exempt
-def ajax_view(request):
+def ajax_add_new_employee(request):
     if request.method == 'POST':
         employee = dict(request.POST)
         print(employee)
@@ -59,3 +59,19 @@ def ajax_view(request):
         return JsonResponse({'message': 'Data received successfully'})
     else:
         return JsonResponse({'error': 'Invalid request method'})
+
+def ajax_search_employee(request):
+    print("hello")
+    if request.method == 'GET':
+        name = request.GET.get('name')
+        employees = Employee.objects.filter(first_name=name)
+        results = []
+        for employee in employees:
+            employee_data = {
+                'id': employee.id,
+                'firstName': employee.first_name,
+                'phone': employee.phone,
+            }
+            results.append(employee_data)
+            pass
+        return JsonResponse(results, safe=False)

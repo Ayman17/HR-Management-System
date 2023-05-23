@@ -1,4 +1,4 @@
-function search()
+async function search()
 {
     let emptyTableData = 
     `<table class="searchTable" id="searchTable">
@@ -20,7 +20,8 @@ function search()
     let requiredName = document.getElementById("searchName").value;
     
     // retrieve all data in the localstrorage in this array
-    const valuesArray = Object.values(localStorage);
+    // const valuesArray = Object.values(localStorage);
+    const valuesArray = await ajaxSearchByName(requiredName);
 
     // to store the value of each row in the output table
     let eTableData = ``;
@@ -28,27 +29,42 @@ function search()
     //flag if nothing is found
     let flag = true;
 
-    // searching in the data
-    for (let i = 0; i < valuesArray.length; ++i)
-    {
-        let e = JSON.parse(valuesArray[i]);
+    // // searching in the data
+    // for (let i = 0; i < valuesArray.length; ++i)
+    // {
+    //     let e = JSON.parse(valuesArray[i]);
 
-        if (typeof e.firstName === 'string' && 
-        e.firstName.toLowerCase().startsWith(requiredName.toLowerCase()))
-        {
-            flag = false;
-            eTableData += 
-            `<tr>
-                <td>${e.firstName}</td>
-                <td>${e.phone}</td>
-                <td>${e.id}</td>
-                <td>
-                    <!-- <button>Approve</button>
-                    <button onclick="reject(${e.id}, this)" id"reject">Reject</button> -->
-                    <button onclick="edit(${e.id})" id="edit">Info</button>
-                </td>
-            </tr>`;
-        }
+    //     if (typeof e.firstName === 'string' && 
+    //     e.firstName.toLowerCase().startsWith(requiredName.toLowerCase()))
+    //     {
+    //         flag = false;
+    //         eTableData += 
+    //         `<tr>
+    //             <td>${e.firstName}</td>
+    //             <td>${e.phone}</td>
+    //             <td>${e.id}</td>
+    //             <td>
+    //                 <!-- <button>Approve</button>
+    //                 <button onclick="reject(${e.id}, this)" id"reject">Reject</button> -->
+    //                 <button onclick="edit(${e.id})" id="edit">Info</button>
+    //             </td>
+    //         </tr>`;
+    //     }
+    // }
+
+    for (let i in valuesArray) {
+        flag = false;
+        eTableData += 
+        `<tr>
+            <td>${valuesArray[i].firstName}</td>
+            <td>${valuesArray[i].phone}</td>
+            <td>${valuesArray[i].id}</td>
+            <td>
+                <!-- <button>Approve</button>
+                <button onclick="reject(${valuesArray[i].id}, this)" id"reject">Reject</button> -->
+                <button onclick="edit(${valuesArray[i].id})" id="edit">Info</button>
+            </td>
+        </tr>`;
     }
 
     let out = document.getElementById("tableDiv");
@@ -66,6 +82,19 @@ function search()
 
     out.innerHTML += "<button onclick=\"research()\" value=\"reSearch\" name=\"research\">Research</button>";
     out.style.display = 'flex';
+}
+
+async function  ajaxSearchByName(name) {
+    let result = []
+    await $.ajax({
+        url: '/ajax/searchEmployee',
+        type: 'GET',
+        data: {"name": name},
+        success: function (resposnse) {result=resposnse},
+        error: function (error) {console.log(error)},
+    })
+    console.log(result);
+    return result;
 }
 
 function research()

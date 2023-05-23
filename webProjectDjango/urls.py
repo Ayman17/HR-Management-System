@@ -27,7 +27,8 @@ urlpatterns = [
     path('search/', views.search_employee, name='search_employee'),
     path('vacation/', views.vacation, name='vacation'),
     path('vacation/submit/', views.submit_vacation, name='submit_vacation'),
-    path('ajax/', views.ajax_view, name='ajax_view'),
+    path('ajax/addNewEmployee', views.ajax_add_new_employee, name='ajax_add_new_employee'),
+    path('ajax/searchEmployee', views.ajax_search_employee, name='ajax_search_employee'),
 ]
 
 if settings.DEBUG:
