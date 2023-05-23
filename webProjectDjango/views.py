@@ -6,8 +6,8 @@ from .models import Employee
 def index(request):
     return render(request, 'Index.html')
 
-def add_new(request):
-    return render(request, 'addNew.html')
+# def add_new(request):
+#     return render(request, 'addNew.html')
 
 def employee_info(request):
     return render(request, 'empInfo.html')
