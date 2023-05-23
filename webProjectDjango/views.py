@@ -75,3 +75,25 @@ def ajax_search_employee(request):
             results.append(employee_data)
             pass
         return JsonResponse(results, safe=False)
+
+# def search_employee(request):
+#     if request.method == 'GET':
+#         name = request.GET.get('name')
+#         query = Q(first_name__icontains=name)
+
+#         # Check if name consists of two words
+#         if len(name.split()) == 2:
+#             first_name, last_name = name.split()
+#             query |= Q(first_name__icontains=first_name, last_name__icontains=last_name)
+
+#         employees = Employee.objects.filter(query)
+#         results = []
+#         for employee in employees:
+#             result = {
+#                 'first_name': employee.first_name,
+#                 'last_name': employee.last_name,
+#                 'email': employee.email,
+#                 # Include other desired fields
+#             }
+#             results.append(result)
+#         return JsonResponse(results, safe=False)
