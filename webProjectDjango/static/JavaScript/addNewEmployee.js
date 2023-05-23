@@ -39,7 +39,8 @@ function addNewEmployee() {
     };
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
-        localStorage.setItem(employee.id, JSON.stringify(employee));
+        // localStorage.setItem(employee.id, JSON.stringify(employee));
+        ajaxSaveEmployee(employee);
 
         const contentDiv = document.getElementById("content_div");
         const myH3 = document.createElement('h3');
@@ -85,6 +86,16 @@ function isValidEmployee(employee){
     }
 
     return statusCodes.valid;
+}
+
+function ajaxSaveEmployee(employee) {
+    $.ajax({
+        url: '/ajax/',
+        type: 'POST',
+        data: employee,
+        success: function (resposnse) {console.log(resposnse)},
+        error: function (error) {console.log(error)},
+    })
 }
 
 function main() {

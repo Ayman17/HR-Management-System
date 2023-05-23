@@ -27,6 +27,7 @@ urlpatterns = [
     path('search/', views.search_employee, name='search_employee'),
     path('vacation/', views.vacation, name='vacation'),
     path('vacation/submit/', views.submit_vacation, name='submit_vacation'),
+    path('ajax/', views.ajax_view, name='ajax_view'),
 ]
 
 if settings.DEBUG:
