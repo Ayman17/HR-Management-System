@@ -11,9 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    width: 70vw;
     min-height: 100vh;
-    margin-left: 3rem;
+    margin: 0 50px;
 
 }
 
@@ -22,12 +22,12 @@ header {
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--back-color);
-    width: 20rem;
+    width: 30vw;
     transition: all 0.9s ease-in-out;
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-top: 2rem;
     margin: 1rem;
     flex: 1;
@@ -45,7 +45,7 @@ header {
     padding: 1rem;
     margin: 0.5rem;
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color: var(--second-secondary-color);
 }
 
@@ -243,6 +243,9 @@ input[type="search"]
     align-items: center;
     height: 100vh;
 }
+#tableDiv h3{
+    text-align: center;
+}
 
 #search_lable {
     font-size: 3rem;
@@ -325,13 +328,17 @@ input[type="search"]
 }
 
 #vacationButtons{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
+    grid-gap: 3rem; */
     font-size: 1.7rem;
     overflow: hidden;
+    text-align: center;
 }
 
+#vacTable{
+    text-align: center;
+}
 
 
 /*------------------------------------------------*/
@@ -355,8 +362,10 @@ input[type="search"]
 
 @media only screen and (max-width: 769px) {
     
+
     .menu {
         display: flex;
+        
     }
 
     .menu.active {
@@ -369,14 +378,20 @@ input[type="search"]
         flex-direction: column;
         width: 100vw;
         min-height: 0;
-        height: 10vh;
+        height: 60px;
         position: absolute;
         background-color: var(--back-color);
     }
 
+    .logo{
+        text-align: center;
+    }
     .menu-bar {
-        display: flex;
         flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
     }
 
     .navigation {
@@ -394,9 +409,29 @@ input[type="search"]
     }
 
     .content {
-        margin: 1vw;
-        margin-top: 10vh;
-        
+        flex-direction: column;
+        width: 100vw;
+    }
+    .content .box{
+        width: 70vw;
+        text-align: center;
+    }
+    .form_div{
+        margin-top: 7rem;
+    }
+    #vacationTable{
+        margin-top: 3rem;
     }
 
+}
+@media only screen and (max-width: 600px){
+    .content{
+        margin: 0 20px;
+    }
+    .content .box{
+        width: 80vw;
+    }
+    header{
+        height: 50px;
+    }
 }
