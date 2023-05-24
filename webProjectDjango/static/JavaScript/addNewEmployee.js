@@ -93,10 +93,11 @@ function isValidEmployee(employee){
 }
 
 function ajaxSaveEmployee(employee) {
+    const data = {"employee": JSON.stringify(employee)}
     $.ajax({
         url: '/ajax/addNewEmployee',
         type: 'POST',
-        data: employee,
+        data: data,
         success: function (resposnse) {console.log(resposnse)},
         error: function (error) {console.log(error)},
     })
@@ -111,5 +112,5 @@ function addNew(){
     const link = document.getElementById("current_url").getAttribute("data-url");
     window.location.href = link;
 }
-
+console.log("bro wtf is going on");
 main();

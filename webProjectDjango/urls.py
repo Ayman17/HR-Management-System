@@ -30,6 +30,12 @@ urlpatterns = [
     path('ajax/addNewEmployee', views.ajax_add_new_employee, name='ajax_add_new_employee'),
     path('ajax/searchEmployee', views.ajax_search_employee, name='ajax_search_employee'),
     path('ajax/getEmployeeById', views.ajax_get_employee_by_id, name='ajax_get_employee_by_id'),
+    path('ajax/editEmployeeInfo', views.ajax_edit_employee_info, name='ajax_edit_employee_info'),
+    path('ajax/deleteEmployee', views.ajax_delete_employee, name='ajax_delete_employee'),
+    path('ajax/saveVacation',  views.ajax_save_vacation, name='ajax_save_vacation'),
+    path('ajax/getVacationsByStatus',  views.ajax_get_vacations_by_status, name='ajax_get_vacations_by_status'),
+    path('ajax/approveVacation',  views.ajax_approve_vacation, name='ajax_approve_vacation'),
+    path('ajax/rejectVacation',  views.ajax_reject_vacation, name='ajax_reject_vacation'),
 ]
 
 if settings.DEBUG:

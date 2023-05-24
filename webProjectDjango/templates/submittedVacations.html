@@ -36,7 +36,7 @@
                     Vacations List
                 </h1>
                 <div id="vacationButtons">
-                    <button onclick="displayVacations('submitted')">Submitted</button>
+                    <button onclick="displayVacations('pending')">Submitted</button>
                     <button onclick="displayVacations('approved')">Approved</button>
                     <button onclick="displayVacations('rejected')">Rejected</button>
                     <button onclick="displayVacations('all')">All Vacations</button>
@@ -47,6 +47,7 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'JavaScript/Home.js' %}"></script>
     <script src="{% static 'JavaScript/vacationList.js' %}"></script>
 </body>
