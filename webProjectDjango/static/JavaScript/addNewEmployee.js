@@ -21,7 +21,7 @@ function stopDefaultSubmit(e) {
     e.preventDefault();
 }
 
-function addNewEmployee() {
+async function addNewEmployee() {
     const employee = {
         id: document.getElementById("id").value,
         firstName: document.getElementById("first_name").value,
@@ -40,8 +40,10 @@ function addNewEmployee() {
     const infoValidation = isValidEmployee(employee)
     if (infoValidation == statusCodes.valid){
         // localStorage.setItem(employee.id, JSON.stringify(employee));
-        ajaxSaveEmployee(employee);
-        displayAddedEmployee();
+        const responseStatus = await ajaxSaveEmployee(employee);
+        if (responseStatus){
+            displayAddedEmployee();
+    }
 
     }else {
         alert(errorMessages[infoValidation]);
@@ -92,15 +94,22 @@ function isValidEmployee(employee){
     return statusCodes.valid;
 }
 
-function ajaxSaveEmployee(employee) {
+async function ajaxSaveEmployee(employee) {
     const data = {"employee": JSON.stringify(employee)}
-    $.ajax({
+    let responseStatus = true;
+    await $.ajax({
         url: '/ajax/addNewEmployee',
         type: 'POST',
         data: data,
-        success: function (resposnse) {console.log(resposnse)},
-        error: function (error) {console.log(error)},
+        success: function (resposnse) {
+            if (resposnse.error != null) {
+                responseStatus = false;
+                alert(resposnse.error);
+            }
+        },
+        error: function (error) {console.log(error);},
     })
+    return responseStatus;
 }
 
 function main() {

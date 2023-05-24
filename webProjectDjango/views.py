@@ -58,6 +58,9 @@ def addNewEmployeeForm(employeeData):
 def ajax_add_new_employee(request):
     if request.method == 'POST':
         employee = json.loads(request.POST.get('employee'))
+        if Employee.objects.filter(id=employee['id']).exists():
+            return JsonResponse({'error': 'Employee with this id already exists'})
+        
         addNewEmployeeForm(employee)
         return JsonResponse({'message': 'Data received successfully'})
     else:
