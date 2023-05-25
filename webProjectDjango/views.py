@@ -36,6 +36,10 @@ def add_new(request):
     return render(request, 'addNew.html')
 
 def addNewEmployeeForm(employeeData):
+    if employeeData["actualVacation"] == "":
+        employeeData["actualVacation"] = "0"
+    if employeeData["availableVacation"] == "":
+        employeeData["availableVacation"] = "0"
     employee = Employee(
         first_name=employeeData['firstName'],
         last_name=employeeData['secondName'],
@@ -60,6 +64,10 @@ def ajax_add_new_employee(request):
         employee = json.loads(request.POST.get('employee'))
         if Employee.objects.filter(id=employee['id']).exists():
             return JsonResponse({'error': 'Employee with this id already exists'})
+        if Employee.objects.filter(email=employee['email']).exists():
+            return JsonResponse({'error': 'Employee with this email already exists'})
+        if Employee.objects.filter(phone=employee['phone']).exists():
+            return JsonResponse({'error': 'Employee with this phone already exists'})
         
         addNewEmployeeForm(employee)
         return JsonResponse({'message': 'Data received successfully'})
