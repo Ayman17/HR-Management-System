@@ -66,10 +66,10 @@ function displayAddedEmployee() {
     document.getElementById("formDiv").style.display = 'none';
 }
 
-function getEmployeeInfo(id) {
-    const employee = localStorage.getItem(id);
-    return employee;
-}
+// function getEmployeeInfo(id) {
+//     const employee = localStorage.getItem(id);
+//     return employee;
+// }
 
 function isValidEmployee(employee){
     if (emailRegex.test(employee.email) == false){
@@ -121,5 +121,4 @@ function addNew(){
     const link = document.getElementById("current_url").getAttribute("data-url");
     window.location.href = link;
 }
-console.log("bro wtf is going on");
 main();

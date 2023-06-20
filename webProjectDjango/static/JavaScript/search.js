@@ -69,7 +69,7 @@ async function  ajaxSearchByName(name) {
         success: function (resposnse) {result=resposnse},
         error: function (error) {console.log(error)},
     })
-    console.log(result);
+
     return result;
 }
 

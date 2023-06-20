@@ -91,10 +91,10 @@ function addNewEmployee() {
     }
 }
 
-function getEmployeeInfo(id) {
-    const employee = localStorage.getItem(id);
-    return employee;
-}
+// function getEmployeeInfo(id) {
+//     const employee = localStorage.getItem(id);
+//     return employee;
+// }
 
 function isValidEmployee(employee){
     if (emailRegex.test(employee.email) == false){
@@ -110,13 +110,7 @@ function isValidEmployee(employee){
         return statusCodes.wrong;
     }
 
-    // for (const info in employee){
-    //     if (employee[info] == null){
-    //         // console.log(localStorage.getItem(eID))
-    //         console.log(info);
-    //         return statusCodes.messing;
-    //     }
-    // }
+
 
     return statusCodes.valid;
 }
